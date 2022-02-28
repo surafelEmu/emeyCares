@@ -1,0 +1,299 @@
+   /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /* 
+      MAIN COLOR: #f1f7f7
+      SECOUNDARY COLOR: #00866d
+      GREY COLOR: #343a40
+      */
+
+   
+
+
+      * {
+        margin: 0 ;
+        padding: 0 ;
+        box-sizing: border-box;
+        color: #343a40;
+     
+        font-family: 'Merriweather', serif;
+        }
+    
+        p {
+            color: rgb(107, 98, 98);
+        }
+    
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+    
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    
+        .body {
+            margin-inline: 10rem;
+        }
+        
+        .nav-bar {
+            display: flex;
+            flex-direction: row;
+            font-size: 2rem;
+            justify-content: space-between;
+            margin-inline: 4.8rem;
+            /* padding-block: 2.8rem; */
+            padding-block: 1rem;
+            align-items: center;
+        }
+    
+        .mobile-nav {
+            display: none;
+        }
+        .navs a {
+            text-decoration: none;
+            margin-left: 6rem;
+            font-size: 1.6rem;
+            color: #218682;
+        }
+
+        header .navs a:last-child {
+            padding-block: 0.5rem;
+            padding-inline: 2rem;
+            background-color: #218682;
+            color: white;
+            border-radius: 5rem;
+        }
+    
+        header {
+            background-color: #f1f7f7;
+            /* height: 60rem; */
+        }
+    
+    
+        img  {
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+        }
+
+        .page {
+            margin-block: 4rem;
+            margin-inline-end: 1rem;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            gap: 4rem;
+        }
+        
+        .main {
+            margin-inline-start: 8rem;
+        }
+        .main .blog_head img {
+            width: 100%;
+            height: 40rem;
+            align-self: center;
+            
+        }
+
+        .blog_head .blog_detail {
+            display: flex;
+            gap: 2rem;
+            margin-block: 1rem;
+        }
+
+        .blog_head .blog_detail p {
+            font-size: 1.8rem;
+        }
+
+        .blog_content h2 {
+            font-size: 3.6rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #797c80;
+        }
+
+        .blog_content p {
+            font-size: 2.2rem;
+            line-height: 1.5;
+        }
+
+        .blog_content {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid #797c80;
+
+        }
+
+        .comments h2{
+            font-size: 3rem;
+            margin-bottom: 2rem;
+
+
+        }
+
+        .comment .person img{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 10%;
+            margin-right: 4rem;
+
+        }
+
+        .comment .person {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment .top {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 2rem;
+            margin-block: 2rem;
+        }
+
+        .comment .top .person small {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .comment .top .person p {
+            font-size: 1.6rem;
+            margin-left: 2rem;
+            color: #218682;
+        }
+
+        .comment .top a {
+            font-size: 1.4rem;
+            padding-inline: 1rem;
+            padding-block: 1rem;
+            background-color: #218682;
+            height: fit-content;
+            text-decoration: none;
+            font-weight: 600;
+            color: whitesmoke;
+        }
+
+        .comment {
+            padding-block: 2rem;
+            margin-block-end: 2rem;
+            margin-inline: 2rem;
+            border-block: 1px solid #c3c5c7;
+        }
+        .comment .comm {
+            font-size: 1.8rem;
+        }
+
+        .leave_comment {
+            width: 90%;
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .leave_comment h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .leave_comment textarea {
+            width: 100%;
+            background-color: #f0f1f1;
+            border: none;
+            margin-bottom: 2rem;
+        }
+
+        .leave_comment  a {
+            font-size: 2.2rem;
+            text-decoration: none;
+            align-self: flex-end;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            background-color: #218682;
+            color: whitesmoke;
+        }
+
+        .links {
+            margin-top: 2rem;
+            margin-inline-end: 2rem;
+        }
+
+        .links a:hover {
+            color: #218682;
+            cursor: pointer ;
+        }
+
+        .links h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .links input {
+            overflow: none;
+            margin-bottom: 2rem;
+            border: none;
+            border: 1px solid #c3c5c7;
+            width: 80%;
+            height: 3rem;
+            font-size: 1.6rem;
+        }
+
+        .catagory {
+            display: flex;
+            flex-direction: column;
+            /* gap: 1rem; */
+            margin-block: 2rem;
+        }
+
+        .links .catagory  a{
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .recent_posts {
+            margin-bottom: 3rem;
+        }
+
+        .recent_posts .post {
+            display: flex;
+            gap: 1rem;
+            margin-block: 2rem;
+        }
+
+        .recent_posts .post img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 10%;
+        }
+
+        .post .header {
+            display: flex;
+            flex-direction: column;
+        }
+        .post .header a {
+            font-weight: 600;
+            margin-block-end: 1rem;
+            font-size: 1.6rem;
+        }
+
+       
+
+        .post .header small {
+            font-size: 1.4rem;
+        }
+
+        .archive_list a {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+       
+
+        .archive_list {
+            display: flex;
+            flex-direction: column;
+        }

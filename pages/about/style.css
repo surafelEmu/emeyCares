@@ -1,0 +1,235 @@
+   /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /* 
+      MAIN COLOR: #f1f7f7
+      SECOUNDARY COLOR: #00866d
+      GREY COLOR: #343a40
+      */
+
+   
+
+
+      * {
+        margin: 0 ;
+        padding: 0 ;
+        box-sizing: border-box;
+        color: #343a40;
+     
+        font-family: 'Merriweather', serif;
+        }
+    
+        p {
+            color: rgb(107, 98, 98);
+        }
+    
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+    
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    
+        .body {
+            margin-inline: 10rem;
+        }
+        
+        .nav-bar {
+            display: flex;
+            flex-direction: row;
+            font-size: 2rem;
+            justify-content: space-between;
+            margin-inline: 4.8rem;
+            /* padding-block: 2.8rem; */
+            padding-block: 1rem;
+            align-items: center;
+        }
+    
+        .mobile-nav {
+            display: none;
+        }
+        .navs a {
+            text-decoration: none;
+            margin-left: 6rem;
+            font-size: 1.6rem;
+            color: #218682;
+        }
+
+        .navs a:last-child {
+            padding-block: 0.5rem;
+            padding-inline: 2rem;
+            background-color: #218682;
+            color: white;
+            border-radius: 5rem;
+        }
+    
+        header {
+            background-color: #f1f7f7;
+            /* height: 60rem; */
+        }
+    
+        h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 4rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+
+    .hero {
+        width: 100%;
+        height: 50rem;
+        margin-bottom: 12.8rem;
+        /* position: relative; */
+    }
+    
+
+    .hero img {
+        width: 100%;
+        height: fit-content;
+        height: 50rem;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .hero .message-hero {
+        position: absolute;
+        width: 100%;
+        height: 50rem;
+        background-color: #08363585;
+        text-align: center;
+        padding-inline: 30rem;
+        padding-block: 15rem;
+        
+
+    }
+
+    .message-hero h1 {
+        color: #9bd4d2;
+        font-size: 4.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .message-hero p {
+        color: #c3d8d7;
+        font-size: 2rem;
+    }
+
+    .mession_section {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        margin-inline: 6rem;
+        margin-bottom: 12.8rem;
+        
+    }
+    
+
+
+    .mession-left .message{
+        padding-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(180, 179, 179);
+    }
+
+    .mession_section .mession-left p {
+        line-height: 1.4;
+        margin-bottom: 3rem;
+    }
+
+    .mession-left a {
+        font-size: 2.2rem;
+        padding-block: 1rem;
+        padding-inline: 2rem;
+        text-decoration: none;
+        background-color: #218682;
+        color: whitesmoke;
+        width: fit-content;
+    }
+
+    .mession-left .div {
+        margin-block: 4rem;
+
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .mession-left .div h3 {
+        font-size: 8.6rem;
+        text-align: center;
+        margin-block: auto;
+    }
+
+    .mession-left .div h2 {
+        align-self: center;
+        margin-block: auto;    
+    }
+
+    .mession_section img {
+        max-width: 55rem;
+        
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+
+
+    .team h2 {
+        text-align: center;
+    }
+
+    .team {
+        margin-inline: 4rem;
+    }
+    .team .team_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4rem;
+        width: 100%;
+        margin-bottom: 12.8rem;
+
+    }
+
+    .team .team_list .member{
+        width: 100%;
+        position: relative;
+    }
+
+    .team .team_list .member img {
+        width: 100%;
+
+        }
+
+    .member .prof {
+        width: 90%;
+        background-color: whitesmoke;
+        border-radius: 5%;
+        position: absolute;
+        bottom: -11%;
+        left: 5%;
+        height: fit-content;
+        padding-block: 1.4rem;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+        /* margin-top: -10rem; */
+    }
+
+    .member .prof h4{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .member .prof p{
+
+        font-size: 1.6rem;
+        color: #343a40;
+        text-align: center;
+    }
