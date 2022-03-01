@@ -1,0 +1,306 @@
+
+
+@media (max-width: 69em) and (min-width: 1em)  {
+    .hero-message p {
+        margin-right: -10rem;
+    }
+
+    .hero-shape {
+        margin-top: -43rem;
+    }
+
+    .special-message p {
+        margin-bottom: 8%;
+    }
+
+    .special img {
+        width: 63%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 63em) {
+
+    html {
+        font-size: 57%;
+    }
+
+    
+
+    .hero-shape {
+        margin-top: -45.5em ;
+        width: 86.8%;
+        height: 150%;
+        margin-left: -4.5rem;
+    
+    }
+
+    /* .hero-message {
+        margin-left: 8.5rem;
+    } */
+
+    .action-section {
+        grid-template-columns: 3fr 3.4fr 3fr;
+    }
+
+    
+}
+
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 49.7%;
+    }
+
+    .special img {
+        width: 65%;
+    }
+}
+
+@media (max-width: 46.8em ) {
+    html {
+        font-size: 53%;
+    }
+    .hero_section {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+
+    .hero-message {
+        font-size: 5.4;
+        margin-left: 0rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .hero-message p {
+        margin-right: 0rem;
+        text-align: center;
+        font-size: 5.4rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero_section img {
+        width: 52.2%;
+        /* margin-left: 15rem; */
+        /* margin-top: 9rem; */
+        margin-inline: 25%;
+        /* margin-inline: auto; */
+    }
+
+    .hero-shape {
+        margin-top: -65.5em;
+        width: 58.6%;
+        height: 156.9%;
+        margin-left: 1.3rem;
+    }
+
+    header {
+        background-color: #f1f7f7;
+        height: 100rem;
+    }
+
+    .action-section {
+        top: 49%;
+        width: 80%;
+    }
+
+    .special img {
+        grid-row: 1;
+    }
+
+    .special {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .special-message p , .services-message-top p {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-inline: 0rem;
+        line-height: 1.5;
+    }
+
+    .step-heading .step-title , .special-message .heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .special-btn {
+        justify-content: center;
+    }
+
+    .btn {
+        font-size: 2.4rem;
+        margin-right: 0rem;
+    }
+
+    .services-message-top h3 , .how_to-heading , h2.latest_blogs-heading ,.special-heading {
+        font-size: 4.4rem;
+    }
+
+    .how_to-steps , .services-list {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .service img {
+        width: 12.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service h4 {
+        font-size: 2.4rem;
+    }
+
+    .service p {
+        font-size: 2rem;
+        line-height: 1.5;
+        width: 60%;
+        text-align: center;
+        margin-inline: auto;
+        margin-bottom: 5.6rem;
+    }
+
+    .step-heading .num {
+        font-size: 4.4rem;
+        padding-inline: 2.4rem;
+    }
+
+    .step-message {
+        font-size: 2.4rem;
+        margin-bottom: 6rem;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .btn2 {
+        font-size: 2.4rem;
+    }
+
+    .care_givers-message p {
+        font-size: 2rem;
+    }
+
+    .blogs {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10rem;
+
+    }
+
+    .blog {
+        width: 70%;
+        justify-self: center;
+    }
+
+    .blog-message a {
+        font-size: 2rem;
+    }
+
+    .blog-message p {
+        font-size: 2rem;
+    }
+
+    h2.blog-heading {
+        font-size: 2.4rem;
+    }
+
+    .blog-message small {
+        font-size: 1.6rem;
+    }
+
+    button.mobile-nav {
+        display: flex;
+        height: 3rem;
+        width: 3.5rem;
+        outline: none;
+        border: none;
+        /* align-self: center; */
+    }
+
+    nav.navs {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
+        opacity: 0 ;
+        pointer-events: none;
+        visibility: hidden;
+        text-align: center;
+        height: 0rem;
+        margin: 0rem;
+        transition: all 0.5s;
+    }
+
+    .open .nav-open {
+        display: none;
+    }
+
+    .open .nav-close {
+        display: block  ;
+    }
+
+    .open .navs {
+        margin-top: 2rem;
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        margin-bottom: 2rem;
+    }
+
+    .nav-open {
+        display: block;
+    }
+
+    .nav-close {
+        display: none;
+    }
+
+
+  
+    .nav-bar {
+        padding-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .navs a {
+        margin-left: 0rem;
+        font-size: 2.4rem;
+    }
+
+
+
+    .open .navs {
+        margin-top: 6.4rem;
+        margin-bottom: 25.6rem;
+        opacity: 1 ;
+        pointer-events: auto ;
+        visibility: visible;
+        text-align: center;
+    }
+
+    /* .navs {
+        display: none;
+    } */
+/* 
+    .navs {
+        background-color: rgba(255 , 255 , 255 , 0.97);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    } */
+
+    
+}
+
+@media(max-width: 35.9em ) {
+    .hero-message p {
+        font-size: 4.4rem;
+    }
+}
