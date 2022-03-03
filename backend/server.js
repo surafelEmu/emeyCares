@@ -10,6 +10,6 @@ mongoose.connect(process.env.DATABASE_LOCAL , () => {
     console.log('successfully connected to database')
 })
 
-app.listen(3000 , () => {
+app.listen(4000 , () => {
     console.log('successfully connected') ;
 })
