@@ -1,10 +1,11 @@
 import './home_styles/style.css'
 import './home_styles/query.css'
 
-export default function() {
+export default function({}) {
     return (
         <body>
     <header>
+
         <div id="my_nav" class="nav-bar">
             <div class="logo">
                 EmeyCares

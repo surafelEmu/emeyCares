@@ -5,17 +5,17 @@ import {useDispatch , useSelector} from 'react-redux'
 
 import Home from './pages/home/home' ;
 import Login from './pages/authPages/signup'
-
-
+import EmployeeList from './pages/employeeListPage'
+import {employeeList} from './action/employeesAciton'
 function App() {
 
   const dispatch = useDispatch() ;
   useEffect(() => {
-    dispatch(loadServices('This is from app.js')) ;
+   // dispatch(employeeList()) ;
   })
 
   return (
-    <Login />
+    <EmployeeList /> 
   );
 }
 
