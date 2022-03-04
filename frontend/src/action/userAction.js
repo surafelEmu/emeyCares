@@ -38,10 +38,11 @@ export const login = (user) => async (dispatch) => {
             }
         }
 
-        const {data} = await axios('http://localhost:4000/api/v1/user/signin' , user , config)
+        const {data} = await axios.post('http://localhost:4000/api/v1/user/signin' , user , config)
 
         dispatch({type: userConstants.LOGIN_SUCCESS , payload: data})
     }catch(error){
+        dispatch({type: userConstants.LOGIN_FAIL , payload: error}) ;
         console.log(error) ;
     }
 }

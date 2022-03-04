@@ -8,5 +8,7 @@ router.route('/create').post(caregiverController.createCaregiver) ;
 
 router.route('/all').get(caregiverController.getAllCaregivers) ;
 
+router.route('/:id').get(caregiverController.getCaregiver) ;
+
 
 module.exports = router ;

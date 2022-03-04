@@ -9,13 +9,13 @@ const caregiver = new mongoose.Schema({
         minlength: [2 , 'A user name can not be less than 2 charactors'] 
     } ,
 
-    // email: {
-    //     type: String ,
-    //     required: [true , 'please provide your email address'] ,
-    //     unique: true ,
-    //     validate: [validator.isEmail , 'Please provide a valid email address.']   
+    email: {
+        type: String ,
+        required: [true , 'please provide your email address'] ,
+        unique: true ,
+        validate: [validator.isEmail , 'Please provide a valid email address.']   
 
-    // } ,
+    } ,
 
     // password: {
     //     type: String ,
@@ -24,16 +24,11 @@ const caregiver = new mongoose.Schema({
     //     select: false 
     // } ,
 
-    // role: {
-    //     type: String ,
-    //     enum: ['user' , 'admin'] , 
-    //     default: 'user'
-    // } , 
-    // age: {
-    //     type: Number ,
-    //     required: [true , 'please provide your age'] , 
+    age: {
+        type: Number ,
+        required: [true , 'please provide your age'] , 
 
-    // } ,
+    } ,
     // profession: [{
     //     name: {
     //         type: String ,

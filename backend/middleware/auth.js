@@ -7,7 +7,7 @@ exports.isAuthUser = async (req ,res ,next) => {
     try{
         // console.log(req.headers.cookie) ;
         const token = req.headers.cookie ;
-
+        console.log(req.cookie) ;
         
         if(!token) return next(new ErrorHandler('please log In first to get access' , 400)) ;
         

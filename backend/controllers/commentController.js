@@ -25,10 +25,10 @@ exports.create = catchAsync(async (req , res , next) => {
         // check if the comment is for the caregivers, post or replay for another comment
 
         if(type === 'caregiver') {
-            typed = await Caregiver.findById('61ebaab26f676b71173d72a0') ;
+            typed = await Caregiver.findById(type_id) ;
 
 
-            console.log(typed.comments.push(type_id)) ;
+            console.log(typed.comments.push(comment)) ;
     
             // comments.push(comment._id) ;
     

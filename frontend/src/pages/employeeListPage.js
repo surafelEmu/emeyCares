@@ -1,7 +1,7 @@
 import {useState , useEffect} from 'react' ;
 import { useDispatch ,useSelector } from 'react-redux';
 import { employeeList } from '../action/employeesAciton';
-import LogIn from './authPages/login' ;
+import Employee from './employee' ;
 
 export default function () {
     const {loading , data} = useSelector(state => state.employeeList)
@@ -35,7 +35,7 @@ export default function () {
                data?(
 
                    data.map(d => {
-                        return <LogIn key = {d._id} D = {d.name} /> 
+                        return <Employee key = {d._id} Emp = {d} /> 
                     })
                ) : (<div></div>)
             }

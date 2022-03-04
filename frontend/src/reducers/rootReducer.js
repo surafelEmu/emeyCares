@@ -4,20 +4,23 @@ import storage from 'redux-persist/lib/storage' ;
 
 import {serviceReducer} from './servicesReducer'
 import {signup, signupReducer} from './authReducer'
-import {listEmployeesReducer} from './employeeReducer' ;
+import {addEmployeeReducer, employeeDetailReducer, listEmployeesReducer , employeeCommentReducer} from './employeeReducer' ;
 
 import { persistReducer } from "redux-persist";
 
 const persistConfig = {
     key: 'root' ,
     storage ,
-    whiteList: ['employeeList']
+    whiteList: ['employeeList' , 'signup']
 }
 
 const rootReducer = combineReducers ({
     services: serviceReducer ,
     signup: signupReducer ,
-    employeeList: listEmployeesReducer
+    employeeList: listEmployeesReducer ,
+    addEmployee: addEmployeeReducer ,
+    empDetail: employeeDetailReducer ,
+    empComment: employeeCommentReducer
 }) ;
 
 export default persistReducer( persistConfig , rootReducer );
