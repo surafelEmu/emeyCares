@@ -15,6 +15,9 @@ exports.create = catchAsync(async (req , res , next) => {
 
         req.body.userId = req.user._id ;
 
+        console.log('i am comment') ;
+        console.log(type_id) ;
+
 
         const comment = await Comment.create(req.body) ;
 

@@ -16,7 +16,8 @@ export const signup = (user) => async (dispatch) => {
         }
         console.log('before axios')
         const {data} = await axios.post('http://localhost:4000/api/v1/user/signup' , user , config)
-       
+
+        
         console.log(data) ;
         dispatch({type: userConstants.REGISTER_USER_SUCCESS , payload: data}) ;
     }catch(err) {
@@ -39,7 +40,9 @@ export const login = (user) => async (dispatch) => {
         }
 
         const {data} = await axios.post('http://localhost:4000/api/v1/user/signin' , user , config)
-
+        document.cookie = "token=" + data.token ;
+        console.log(document.cookie) ;
+       
         dispatch({type: userConstants.LOGIN_SUCCESS , payload: data})
     }catch(error){
         dispatch({type: userConstants.LOGIN_FAIL , payload: error}) ;

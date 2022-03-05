@@ -47,7 +47,7 @@ export default function({Emp}) {
             console.log('dispatching comment')
 
             dispatch(commentOnEmployee(
-                data.token ,
+               
                 {
                     type: 'caregiver' ,
                     type_id: e.target.id ,

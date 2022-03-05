@@ -50,16 +50,16 @@ export const employeeDetail = (id) => async (dispatch) => {
     }
 }
 
-export const commentOnEmployee = (token ,comment) => async (dispatch) =>  {
+export const commentOnEmployee = (comment) => async (dispatch) =>  {
     try{
         dispatch({type: employeeConstants.COMMENT_EMPLOYEE_REQUEST}) ;
 
-        console.log(token) ;
+        console.log(document.cookie) ;
         const config = {
             headers: {
-                'Content-Type': 'application/json'
-            } , 
-            cookie: token
+                'Content-Type': 'application/json' ,
+                "Authorization" : `Bearer ${document.cookie}`
+            } 
         }
         const {data} = await axios.post('http://localhost:4000/api/v1/comment/create' , comment , config)
 

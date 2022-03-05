@@ -6,14 +6,15 @@ exports.isAuthUser = async (req ,res ,next) => {
 
     try{
         // console.log(req.headers.cookie) ;
-        const token = req.headers.cookie ;
-        console.log(req.cookie) ;
+        const token = req.headers.authorization ;
+        console.log(req.headers.authorization) ;
+       
         
         if(!token) return next(new ErrorHandler('please log In first to get access' , 400)) ;
         
         console.log(token)
 
-        const splited = token.split('=') ;
+        const splited = token.split('token=') ;
         console.log(splited[1]) ;
         const decoded = jwt.verify(splited[1] , process.env.JWTSECRET) ;
     
