@@ -1,5 +1,6 @@
 import {useState , useEffect} from 'react' ;
 import { useDispatch ,useSelector } from 'react-redux';
+import { bookNow } from '../action/bookingAction';
 
 import { employeeDetail , commentOnEmployee } from '../action/employeesAciton';
 
@@ -57,6 +58,16 @@ export default function({Emp}) {
         }else if(e.target.name == 'commentArea') {
             setComment(e.target.value) ;
             console.log(comment)
+        } else if(e.target.name == 'book') {
+            console.log('this is booking') ;
+            console.log(e) ;
+            dispatch(bookNow(
+                {
+                    caregiver: e.target.id ,
+                    startDate: '2022-05-22' ,
+                    finishDate: '2022-08-22'
+                }
+            )) ;
         }
 
     }
@@ -74,8 +85,9 @@ export default function({Emp}) {
             {age}
             {email}
         </div>
-
-
+        <div>
+            <input id={Emp._id} name="book" type="button" value="book Now" onClick={onChange} />
+        </div>
         <div>
             <p>Leave a comment</p>
 

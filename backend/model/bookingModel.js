@@ -1,10 +1,10 @@
 const mongoose = require('mongoose') ;
 
 const bookingSchema = mongoose.Schema({
-    client: {
-        type: mongoose.Schema.ObjectId ,
-        ref: 'Client'
-    } ,
+    // client: {
+    //     type: mongoose.Schema.ObjectId ,
+    //     ref: 'Client'
+    // } ,
     caregiver: {
         type: mongoose.Schema.ObjectId ,
         ref: 'Caregiver'
@@ -21,6 +21,16 @@ const bookingSchema = mongoose.Schema({
         type: Date ,
         required: [true , 'When do you expecting to start']
     } ,
+    shift:[ {
+
+        startTime: {
+            type: Date 
+        },
+        endTime: {
+            type: Date
+        }
+       
+    }] ,
     finishDate: {
         type: Date ,
         default: this.startDate + '6 month'

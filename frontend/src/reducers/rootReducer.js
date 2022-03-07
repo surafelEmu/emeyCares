@@ -7,6 +7,7 @@ import {signup, signupReducer} from './authReducer'
 import {addEmployeeReducer, employeeDetailReducer, listEmployeesReducer , employeeCommentReducer} from './employeeReducer' ;
 
 import { persistReducer } from "redux-persist";
+import { bookingReducer } from "./bookReducer";
 
 const persistConfig = {
     key: 'root' ,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers ({
     employeeList: listEmployeesReducer ,
     addEmployee: addEmployeeReducer ,
     empDetail: employeeDetailReducer ,
-    empComment: employeeCommentReducer
+    empComment: employeeCommentReducer ,
+    booking: bookingReducer
 }) ;
 
 export default persistReducer( persistConfig , rootReducer );

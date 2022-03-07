@@ -63,14 +63,26 @@ const caregiver = new mongoose.Schema({
     // rating: {
     //     type: Number 
     // } ,
-    // isBooked: {
-    //     type: Boolean ,
-    //     default: false
-    // } ,
-    // bookings: [{
-    //     type: mongoose.Schema.ObjectId ,
-    //     ref: 'Booking'
-    // }] ,
+    isBooked: {
+        type: Boolean ,
+        default: false
+    } ,
+    shifts: [
+        {
+            start: {
+                type: Date , 
+                required: true 
+            } ,
+            end: {
+                type: Date ,
+                required: true 
+            }
+        }
+    ] ,
+    bookings: [{
+        type: mongoose.Schema.ObjectId ,
+        ref: 'Booking'
+    }] ,
     // training: [
     //     {
     //         hrs: {
@@ -91,10 +103,10 @@ const caregiver = new mongoose.Schema({
     //         }
     //     }
     // ] ,
-    // waitList: [{
-    //     type: mongoose.Schema.ObjectId ,
-    //     ref: 'Booking'
-    // }] ,
+    waitList: [{
+        type: mongoose.Schema.ObjectId ,
+        ref: 'Booking'
+    }] ,
     // client: [
     //     {
     //         type: mongoose.Schema.ObjectId ,
