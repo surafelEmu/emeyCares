@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./query.css">
+    <script src="jquery-3.5.1.min.js"></script>
 
+    <script>
+        const container = document.getElementsByClassName('bag') ;
+        console.log(container) ;
+
+        const singInButton = document.getElementsByClassName('signin')[0] ;
+        
+        console.log(singInButton) ;
+
+        $('.signin').click(function() {
+            console.log('j Query');
+        })
+
+    </script>
     <title>Emey Cares</title>
 </head>
 <body>
@@ -30,7 +44,7 @@
                  <p>Password</p>
                  <input type="text" placeholder="*********"/>
              </div>
-             <button>sign up</button>
+             <button class="signup">sign up</button>
 
             </div>
             
@@ -44,12 +58,14 @@
                 <p>Check up on your loved one,See how they are doing</p>
             </div>
             <div class="action_side">
-                <button>
+                <button class="signin">
                     LogIn
                 </button>
             </div>
-        </div>
+            <div class="wave">
 
+            </div>
+        </div>
 
     </div>
   
