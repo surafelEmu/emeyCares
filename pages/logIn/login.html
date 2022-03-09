@@ -6,20 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./query.css">
-    <script src="jquery-3.5.1.min.js"></script>
-
-    <script>
-        const container = document.getElementsByClassName('bag') ;
-        console.log(container) ;
-
-        const singInButton = document.getElementsByClassName('signin')[0] ;
+    
+    <script src="./script.js">
         
-        console.log(singInButton) ;
-
-        $('.signin').click(function() {
-            console.log('j Query');
-        })
-
     </script>
     <title>Emey Cares</title>
 </head>
@@ -27,24 +16,23 @@
     <div class="bag">
         <div class="container">
             <div class="heading">
-             <h3>Sign Up</h3>
-             <p>By being a part of our family be close to your loved once even at far</p>
+             <h3 class="head">Sign Up</h3>
             </div>
      
             <div class="action">
-                <div class="name">
+                <div class="name   filed">
                     <p>Name</p>
                     <input type="text" placeholder="John Black"/>
                 </div>
-                <div class="name">
+                <div class="email  filed">
                  <p>E-mail</p>
                  <input type="text" placeholder="john@gmail.com"/>
              </div>
-             <div class="name">
+             <div class="password filed">
                  <p>Password</p>
                  <input type="text" placeholder="*********"/>
              </div>
-             <button class="signup">sign up</button>
+             <button  class="left">sign up</button>
 
             </div>
             
@@ -55,10 +43,10 @@
         <div class="container-side">
             <div class="content">
                 <h4>Wellcome!</h4>
-                <p>Check up on your loved one,See how they are doing</p>
+                <p class="message">Check up on your loved one,See how they are doing</p>
             </div>
             <div class="action_side">
-                <button class="signin">
+                <button flag="off" class="right signin">
                     LogIn
                 </button>
             </div>
