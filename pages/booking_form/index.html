@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bag">
+        <!-- <h3 class="title">Care Sicker Information</h3> -->
+        <div class="container">
+            <div class="container_left">
+                <h4>Full Name</h4>
+
+                <div class="name_container">
+                    <input type="text" placeholder="First Name" />
+                    <input type="text" placeholder="Last Name" />
+
+                </div>
+                <div class="gender_and_Dbirth">
+                   
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Gender</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Male</a>
+                    <a href="#about">Female</a>
+                    </div>
+                </div>
+
+
+
+                <input type="text" placeholder="Date of Birth" onfocus="{this.type='date'}">
+
+                </div>
+                
+                <div class="address">
+                    <h4>Address</h4>
+                    <div>
+
+                        <input type="text" placeholder="City">
+                        <input type="text" placeholder="SubCity">
+                        <input type="text" placeholder="Street Address">
+                        <input type="number" placeholder="Phone Number">
+                    </div>
+                </div>
+
+
+                
+            </div>
+
+      
+    
+            <div class="container_right">
+                      
+                <div class="inner_container">
+
+                    <div class="medical_container">
+                        <p>past medical problem</p>
+                        <div class="medical_problems">
+                            <input type="text" placeholder="ex a hart surgery">
+                            <div>
+                                <button>+</button>
+                                <button>x</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="medical_container">
+                        <p>Any kind of medicaions currently taking</p>
+                        <div class="medical_problems">
+                            <input type="text" placeholder="ex a hart surgery">
+                            <div>
+                                <button>+</button>
+                                <button>x</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="medical_container">
+                        <p>current medical problems</p>
+                        <div class="medical_problems ">
+                            <input type="text" placeholder="ex a hart surgery">
+                            <div>
+                                <button>+</button>
+                                <button>x</button>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+    
+                    <div class="medical_container">
+                        <p>How can we help?</p>
+                        <div class="medical_problems">
+                            <input type="text" placeholder="ex I need just a baby sitter">
+                            <div>
+                                <button>+</button>
+                                <button>x</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- <input type="date" class="startDate" placeholder="Start Date"> -->
+        
+                </div>
+            </div>
+    
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -37,10 +37,10 @@ const clientSchema = mongoose.Schema({
     // }] ,
 
 
-    doMedicate: {
-        type: Boolean ,
-        required: [true , 'please provide as if you medicate with any substance']
-    } ,
+    // doMedicate: {
+    //     type: Boolean ,
+    //     required: [true , 'please provide as if you medicate with any substance']
+    // } ,
 
     medication: [{
         type: mongoose.Schema.ObjectId ,
