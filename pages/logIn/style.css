@@ -21,6 +21,10 @@
      
         font-family: 'Merriweather', serif;
         }
+
+        html {
+            font-size: 62.5%;
+        }
     
     body{
         background-color: #f1f7f7 ;
@@ -30,7 +34,7 @@
         display: grid;
         grid-template-columns: 3fr 2fr;
         background-color: white;
-        max-width: 50%;
+        max-width: 35%;
         margin-inline: auto;
         margin-top: 10% ;
         text-align: center;
@@ -38,6 +42,8 @@
         overflow-y: hidden;
         overflow-x: hidden;
         border-radius: 2rem;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
     }
 
     .right-panel-active .container {
@@ -141,9 +147,10 @@
     }
 
     .action  input {
-        width: 100%;
+        width: 92%;
         margin-top: 0.5rem;
         height: 2rem;
+        padding-block: 1.4rem;
         outline: none;
         border: none;
         border: 0.01rem solid rgb(202, 202, 202) ;
@@ -156,7 +163,7 @@
     .action button {
         margin-inline: 5%;
         padding-block: 0.6rem;
-        width: 90%;
+        width: 80%;
         font-size: 1.2rem;
         font-weight: 700;
         border-radius: 10rem;
