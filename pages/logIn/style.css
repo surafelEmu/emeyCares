@@ -46,6 +46,7 @@
 
     }
 
+    
     .right-panel-active .container {
         transform: translateX(90%);
     }
