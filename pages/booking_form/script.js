@@ -2,125 +2,114 @@
 window.onload = function() {
 
 
-    class node {
-        constructor(data , left=null , right=null ) {
-            this.data = data ;
-            this.left = left ;
-            this.right = right ;
+    const Stock = (function() {
+        const items = new WeakMap() ;
 
-        }
-    }
-
-    class linkedList {
-        constructor() {
-            this.root = null ;
-        }
-
-
-        add(data) {
-
-            const n = new node(data)
-            if(this.root == null) {
-                this.root = n ;
-            }else {
-                let current = this.root ;
-                // console.log(!current.right)
-                while(current) {
-                    console.log('inside the loop')
-                    console.log(current.right) ;
-                    if(!current.right) {
-                        current.right = n ;
-                        // current.left = current.left ;
-
-                        break ;
-                    }
-                    current = current.right ;
-                }
+        class stock {
+            constructor() {
+                items.set(this , []) ;
             }
-        
-            console.log(this.root) ;
-        
+
+            push(data) {
+                let l = items.get(this) ;
+                console.log(l) ;
+                return l.push(data) ;
+            }
+
+            pop() {
+                let l = items.get(this) ;
+                return l.pop() ;
+            }
+
+            peak() {
+                let l = items.get(this) ;
+                return l[l.length - 1] ;
+            }
+
+            isEmpty() {
+                let l = items.get(this) ;
+                return l.length == 0 ;
+            }
+        }
+        return stock ;
+    })()
+ 
+
+    const stock_nxt = new Stock() ;
+
+    const stock_bck = new Stock() ;
+
+    stock_nxt.push('four') ;
+    stock_nxt.push('three') ;
+    stock_nxt.push('two') ;
+    stock_nxt.push('one') ;
+
+    console.log(stock_nxt.peak()) ;
+    
+    // console.log(stock_nxt.pop()) ;
+
+    // console.log(stock_nxt.peak()) ;
+
+
+    window.onclick = function(event) {
+
+
+        if(event.target.matches('.btn_nxt')) {
+
+            const currentNxt = stock_nxt.pop() ;
+            const currentPass = stock_nxt.peak() ;
+
+            console.log(currentNxt); 
+
+            stock_bck.push(currentNxt) ;
+
+            const trackerOn = document.querySelector(`.${currentNxt}`) ;
+            trackerOn.classList.add('on')
+
+            const containerPass = document.querySelector(`.${currentNxt}C`) ;
+            const containerNxt = document.querySelector(`.${currentPass}C`) ;
+
+
+            containerNxt.classList.remove('off') ;
+            containerNxt.classList.add('on') ;
+            
+            containerPass.classList.remove('on') ;
+            containerPass.classList.add('off') ;
+
+            console.log(containerNxt) ;
+            console.log(containerPass) ;
+
+
         }
 
-        show() {
-            return this.root ;
+        if(event.target.matches('.btn_back')) {
+
+            const nxt = stock_bck.pop() ;
+            const pass = stock_nxt.peak()
+
+            stock_nxt.push(nxt) ;
+
+
+
+            const containerPass = document.querySelector(`.${pass}C`) ;
+            const containerNxt = document.querySelector(`.${nxt}C`) ;
+
+
+
+            containerNxt.classList.remove('off') ;
+            containerNxt.classList.add('on') ;
+            
+            containerPass.classList.remove('on') ;
+            containerPass.classList.add('off_bck') ;
+
+            console.log(containerNxt) ;
+            console.log(containerPass) ;
+
+
+
         }
+
+
+        
     }
-
-
-
-    const ll = new linkedList() ;
-    // ll.add('one') ;
-    ll.add('two') ;
-    ll.add('three') ;
-    ll.add('four') ;
-
-    let current = ll.show() ;
-
-
-    let currentData = 'one' ;
-
-window.onclick = function(event) {
-    // if(event.target.matches('.dropbtn')) {
-    //     document.getElementById("myDropdown").classList.toggle("show"); 
-    // }else {
-    //     var dropdowns = document.getElementsByClassName("dropdown-content") ;
-
-    //     for(let i = 0 ; i < dropdowns.length ; i++) {
-    //         var openDropdown = dropdowns[i] ;
-    //         if(openDropdown.classList.contains('show')) {
-    //             openDropdown.classList.remove('show') ;
-    //         }
-    //     }
-    // }
-
-    console.log(event)
-   
-
-    if(event.target.matches('.btn_nxt')) {
-        // console.log('just clicked') ;
-        // console.log(current.data) ;
-      
-        // console.log('current Data') ;
-        // console.log(currentData) ;
-        
-
-        let currentDiv = document.querySelector(`.${current.data}`) ;
-
-        let currentDivC = document.querySelector(`.${current.data}C`) ;
-
-        
-        currentDiv.classList.add('on') ;
-        
-
-        console.log(currentDivC) ;
-
-        currentDivC.classList.add('on') ;
-
-
-        if(currentData) {
-            let passedData = document.querySelector(`.${currentData}C`) ;
-            passedData.classList.remove('on')
-            passedData.classList.add('off') ;
-            console.log(passedData)
-        }
-
-        // passContainer.classList.add('off') ;
-
-        // document.getElementById(id).style.property = new style 
-        console.log(currentDiv) ;
-
-        currentDiv.classList.add('on') ;
-
-
-        currentData = current.data ;
-        current = current.right ;
-
-
-
-    }
-
-
-}
-
 }
