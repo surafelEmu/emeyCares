@@ -9,7 +9,7 @@ import Login from './pages/authPages/login'
 import EmployeeList from './pages/employeeListPage'
 import {employeeList} from './action/employeesAciton'
 import AddEmployeePage from './pages/addEmployeePage';
-
+import Book from './pages/book/book';
 function App() {
 
   const dispatch = useDispatch() ;
@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div>
-     <EmployeeList /> 
+     <Book /> 
     {/* < Signup />  */}
-    < Login /> 
+    {/* < Login />  */}
 
     </div>
    

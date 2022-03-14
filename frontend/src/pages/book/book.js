@@ -1,109 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-    <title>Document</title>
-</head>
-<body>
+import {useState , useEffect} from 'react' ;
+import stock from '../../utils/stock';
+import './style.css' ;
 
-    <div class="header_bag">
+import './script.js' ;
+
+
+export default function () {
+
+    const stock_nxt = new stock() ;
+    const stock_bck = new stock() ;
+
+
+    const [data , setData] = useState({
+        firstName: '' ,
+        lastName: '' ,
+        gender: '' ,
+        dateofBirth: '' ,
+        city: '' ,
+        subCity: '' ,
+        street: '' ,
+        phone: ''
+    })
+
+
+    const {firstName , lastName , gender , dateofBirth , city ,
+                subCity , street , phone} = data ;
+
+    
+
+
+    console.log(stock_bck)
+
+    useEffect(() => {
+
+
+    } ,[])
+
+
+    function onChange(e) {
+        console.log(e.target.className) ;
+        let flag = '' ;
+        flag = e.target.className.split(' ')[0] ;
+        console.log(flag)
+        if(flag === 'btn') {
+            console.log('i am here') ;
+        }else {
+            setData({...data , [e.target.className]: e.target.value})
+        
+        }
+    }
+
+
+
+
+    return (
+        <body>
+
+    <div className="header_bag">
         <h2>Book Your Caregiver</h2>
 
-        <div class="progress">
-            <div class="step one">
+        <div className="progress">
+            <div className="step one">
                 <p>Client's Info</p>
-                <div class="counter counter_1">
+                <div className="counter counter_1">
                     
                         <span>1</span> 
-                        <svg class="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="250" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="260" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#f1f7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"></polyline></svg>         
-                        <!-- <div></div> -->
+                        <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="250" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="260" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#f1f7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"></polyline></svg>         
             </div>
             </div>
-            <div class="step two">
+            <div className="step two">
                 <p>Choose your Care giver</p>
-                <div class="counter counter_2">
+                <div className="counter counter_2">
                     <span>2</span>
-                    <svg class="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
                 </div>
             </div>
-            <div class="step three">
+            <div className="step three">
                 <p>Terms and Conditions</p>
-                <div class="counter counter_3">
+                <div className="counter counter_3">
                     <span>3</span>
-                    <svg class="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
                 </div>
             </div>
-            <div class="step four">
+            <div className="step four">
                 <p>Conformation</p>
-                <div class="counter counter_4">
+                <div className="counter counter_4">
                     <span>4</span>
-                    <svg class="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
                   </div>
             </div>
         </div>
     </div>
-    <div class="bag">
+
+
+
+    <div className="bag">
 
         
 
 
-        <!-- <h3 class="title">Care Sicker Information</h3> -->
-        <div class="container personal_Info oneC on" id="oneC">
-            <div class="container_left">
+        <div className="container personal_Info oneC on" id="oneC">
+            <div className="container_left">
                 
                 <h4>Full Name</h4>
 
-                <div class="name_container">
-                    <input id="Name_f" type="text" placeholder="First Name" />
-                    <input id="Name_l" type="text" placeholder="Last Name" />
+                <div className="name_container">
+                    <input value={firstName} className="firstName" onChange={onChange} id="Name_f" type="text" placeholder="First Name" />
+                    <input value={lastName} className="lastName" onChange={onChange} id="Name_l" type="text" placeholder="Last Name" />
                 </div>
-                <small id="error_Name" class="error"></small>
-                <div class="gender_and_Dbirth">
+                <small id="error_Name" className="error"></small>
+                <div className="gender_and_Dbirth">
                    
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Gender</button>
-                    <div id="myDropdown" class="dropdown-content">
+                <div className="dropdown">
+                    <button onClick="myFunction()" className="dropbtn">Gender</button>
+                    <div id="myDropdown" className="dropdown-content">
                     <a href="#home">Male</a>
                     <a href="#about">Female</a>
                     </div>
                 </div>
                 
                 
-                <input id="gb_birth" type="text" placeholder="Date of Birth" onfocus="{this.type='date'}">
+                <input value={dateofBirth} className="birthDate" onChange={onChange} id="gb_birth" type="text" placeholder="Date of Birth" onfocus="{this.type='date'}" />
                 
             </div>
-            <small id="error_gb" class="error"></small>
+            <small id="error_gb" className="error"></small>
                 
-                <div class="address">
+                <div className="address">
                     <h4>Address</h4>
                     <div>
 
-                        <input id="address_city" type="text" placeholder="City">
-                        <input id="address_subCity" type="text" placeholder="SubCity">
-                        <input id="address_street" type="text" placeholder="Street Address">
-                        <input id="address_phone" type="number" placeholder="Phone Number">
+                        <input value={city} className="city" onChange={onChange} id="address_city" type="text" placeholder="City" />
+                        <input value={subCity} className="subCity" onChange={onChange} id="address_subCity" type="text" placeholder="SubCity" />
+                        <input value={street} className="street" onChange={onChange} id="address_street" type="text" placeholder="Street Address" />
+                        <input value={phone} className="phone" onChange={onChange} id="address_phone" type="number" placeholder="Phone Number" /> 
                     </div>
                 </div>
-
-            <small id="error_address" class="error"></small>
+ 
+            <small id="error_address" className="error"></small>
 
                 
             </div>
 
       
     
-            <div class="container_right">
+            <div className="container_right">
                       
-                <div class="inner_container">
+                <div className="inner_container">
 
-                    <div class="medical_container">
+                    <div className="medical_container">
                         <p>past medical problem</p>
-                        <div class="medical_problems">
-                            <input type="text" placeholder="ex a hart surgery">
+                        <div className="medical_problems">
+                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
                             <div>
                                 <button>+</button>
                                 <button>x</button>
@@ -111,10 +158,10 @@
                         </div>
                     </div>
     
-                    <div class="medical_container">
+                    <div className="medical_container">
                         <p>Any kind of medicaions currently taking</p>
-                        <div class="medical_problems">
-                            <input type="text" placeholder="ex a hart surgery">
+                        <div className="medical_problems">
+                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
                             <div>
                                 <button>+</button>
                                 <button>x</button>
@@ -122,10 +169,10 @@
                         </div>
                     </div>
     
-                    <div class="medical_container">
+                    <div className="medical_container">
                         <p>current medical problems</p>
-                        <div class="medical_problems ">
-                            <input type="text" placeholder="ex a hart surgery">
+                        <div className="medical_problems ">
+                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
                             <div>
                                 <button>+</button>
                                 <button>x</button>
@@ -135,17 +182,16 @@
                         </div>
                     </div>
     
-                    <div class="medical_container">
+                    <div className="medical_container">
                         <p>How can we help?</p>
-                        <div class="medical_problems">
-                            <input type="text" placeholder="ex I need just a baby sitter">
+                        <div className="medical_problems">
+                            <input onChange={onChange} type="text" placeholder="ex I need just a baby sitter" />
                             <div>
                                 <button>+</button>
                                 <button>x</button>
                             </div>
                         </div>
                     </div>
-                     <!-- <input type="date" class="startDate" placeholder="Start Date"> -->
         
                 </div>
             </div>
@@ -153,64 +199,64 @@
         </div>
 
 
-        <div class="container caregiver_detail twoC" id="twoC">
-            <div class="caregiver">
-                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="">
-                <div class="personal_info">
+        <div className="container caregiver_detail twoC" id="twoC">
+            <div className="caregiver">
+                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="" />
+                <div className="personal_info">
                     <h5>Eleanor Pana</h5>
                     <span>age</span>
                     <p>Profession</p>
                     
-                    <p class="pay">120 birr/Hr</p>
+                    <p className="pay">120 birr/Hr</p>
 
                     <button>Book Now</button>
                 </div>
 
-                <div class="professional_info"> 
-                    <p class="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
-                    <p class="aval">She is now avaliable to work 40hr per week including weekends</p>
+                <div className="professional_info"> 
+                    <p className="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
+                    <p className="aval">She is now avaliable to work 40hr per week including weekends</p>
 
                     <a href="">See Detail</a>
                 </div>
 
             </div>
 
-            <div class="caregiver">
-                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="">
-                <div class="personal_info">
+            <div className="caregiver">
+                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="" />
+                <div className="personal_info">
                     <h5>Eleanor Pana</h5>
                     <span>age</span>
                     <p>Profession</p>
                     
-                    <p class="pay">120 birr/Hr</p>
+                    <p className="pay">120 birr/Hr</p>
 
                     <button>Book Now</button>
                 </div>
 
-                <div class="professional_info"> 
-                    <p class="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
-                    <p class="aval">She is now avaliable to work 40hr per week including weekends</p>
+                <div className="professional_info"> 
+                    <p className="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
+                    <p className="aval">She is now avaliable to work 40hr per week including weekends</p>
 
                     <a href="">See Detail</a>
                 </div>
 
             </div>
 
-            <div class="caregiver">
-                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="">
-                <div class="personal_info">
+            <div className="caregiver">
+                <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="" />
+                <div className="personal_info">
                     <h5>Eleanor Pana</h5>
                     <span>age</span>
                     <p>Profession</p>
                     
-                    <p class="pay">120 birr/Hr</p>
+                    <p className="pay">120 birr/Hr</p>
 
                     <button>Book Now</button>
                 </div>
 
-                <div class="professional_info"> 
-                    <p class="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
-                    <p class="aval">She is now avaliable to work 40hr per week including weekends</p>
+                <div className="professional_info"> 
+                    <p className="memo">Eleanor is a dedecated and compassionate person who has real connection with kids.</p>
+                    <p className="aval">She is now avaliable to work 40hr per week including weekends</p>
 
                     <a href="">See Detail</a>
                 </div>
@@ -219,7 +265,7 @@
     
         </div>
 
-        <div class="terms threeC" id="threeC">
+        <div className="terms threeC" id="threeC">
             <h3>Terms and Conditions</h3>
 
             <p>
@@ -265,7 +311,7 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
             </p>
         </div>
 
-        <div class="final_instr fourC">
+        <div className="final_instr fourC">
 
             <h3>ALMOST DONE!!</h3>
 
@@ -279,9 +325,9 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
         </div>
 
 
-        <div class="confirm fiveC" >
+        <div className="confirm fiveC" >
                 <img src="https://img.icons8.com/cute-clipart/512/000000/ok.png"/>
-                <div class="message">You Have Successfully Scheduled your Session the final step is to payment through banking or up front in person on office</div>
+                <div className="message">You Have Successfully Scheduled your Session the final step is to payment through banking or up front in person on office</div>
         </div>
         
     </div>
@@ -289,9 +335,10 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
 
 
 
-    <div class="action_set">
-        <button class="btn btn_back" id="bck">Back</button>
-        <button class="btn btn_nxt">Next</button>
+    <div className="action_set">
+        <button onClick={onChange} className="btn btn_back" id="bck">Back</button>
+        <button onClick={onChange} className="btn btn_nxt">Next</button>
     </div>
 </body>
-</html>
+    )
+}
