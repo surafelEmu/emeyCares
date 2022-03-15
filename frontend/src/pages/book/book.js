@@ -1,8 +1,14 @@
 import {useState , useEffect} from 'react' ;
+import {bookNow} from '../../action/bookingAction'
+
 import stock from '../../utils/stock';
+
+
 import './style.css' ;
 
 import './script.js' ;
+
+import { useDispatch, useSelector  } from 'react-redux';
 
 
 export default function () {
@@ -31,6 +37,8 @@ export default function () {
 
     console.log(stock_bck)
 
+    const dispatch = useDispatch() ;
+
     useEffect(() => {
 
 
@@ -40,13 +48,17 @@ export default function () {
     function onChange(e) {
         console.log(e.target.className) ;
         let flag = '' ;
-        flag = e.target.className.split(' ')[0] ;
+        flag = e.target.className.split(' ') ;
+        console.log('.................Here i am....................')
         console.log(flag)
-        if(flag === 'btn') {
+        if(flag[0] === 'btn') {
+            if(flag[1] === 'btn_nxt') {
+                console.log(data) ;
+                dispatch(bookNow(data)) ;
+            }
             console.log('i am here') ;
         }else {
             setData({...data , [e.target.className]: e.target.value})
-        
         }
     }
 
@@ -119,8 +131,10 @@ export default function () {
                     </div>
                 </div>
                 
-                
-                <input value={dateofBirth} className="birthDate" onChange={onChange} id="gb_birth" type="text" placeholder="Date of Birth" onfocus="{this.type='date'}" />
+                <div className="dateofBirth">
+                <small>Date of Birth</small>
+                <input  className="birthDate" onChange={onChange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
+                </div>
                 
             </div>
             <small id="error_gb" className="error"></small>

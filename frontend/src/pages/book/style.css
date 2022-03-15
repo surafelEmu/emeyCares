@@ -173,7 +173,16 @@
         }
 
 
+        .dateofBirth small {
+            margin-left: 1rem;
+            margin-bottom: -0.8rem;
+        }
 
+        .dateofBirth {
+            display: flex;
+            flex-direction: column;
+            gap: 0.01rem;
+        }
 
 
 

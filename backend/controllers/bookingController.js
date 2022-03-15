@@ -6,7 +6,15 @@ exports.create = catchAsync( async (req , res , next) => {
 
 
 
-        req.body.userId = req.user._id ;        
+        req.body.userId = req.user._id ;
+        
+        req.body.caregiver = '61ebaab26f676b71173d72a0'
+
+        console.log(req.body) ;
+
+        req.body.startDate = new Date
+
+        req.body.finishDate = req.body.startDate ;
 
         const { client0 } = req.body ;
 
