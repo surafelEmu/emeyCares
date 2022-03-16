@@ -14,8 +14,11 @@ stock_nxt.push('one') ;
 
 console.log(stock_nxt.peak()) ;
 
+let flag = true ;
+
 
 const validateName = (selector) => {
+
 
     console.log(selector)
     
@@ -27,7 +30,7 @@ const validateName = (selector) => {
             console.log(first[0]) ;
     
             const fName = document.getElementById(`${el}`) ;
-            const error = document.getElementById(`error_${first[0]}`) ;
+            //const error = document.getElementById(`error_${first[0]}`) ;
     
             fName.addEventListener('change' , (e) => {
                 console.log(e) ;
@@ -35,14 +38,17 @@ const validateName = (selector) => {
         
             if(fName.value == '') {
                 console.log('please add something')
-                error.textContent = `please add your ${first[1]}` ;
+                //error.textContent = `please add your ${first[1]}` ;
                 fName.style.border = '0.1rem solid red'
-                error.style.color = 'red' ;
+               // error.style.color = 'red' ;
+               console.log('..............................................flag..................')
+               flag = false ;
             }
         
             console.log(fName.value) ;
         })
-    
+        
+        return flag ;
     
     }
     
@@ -70,7 +76,8 @@ const validateName = (selector) => {
 
                 const curButton = document.querySelector('.btn_nxt') ;
 
-                validateName(['Name_f' , 'Name_l' , 'gb_birth' , 'address_city' , 'address_subCity', 'address_street' , 'address_phone' ]) ;
+                console.log('This is the validation') ;
+                console.log(validateName(['Name_f' , 'Name_l' , 'gb_birth' , 'address_city' , 'address_subCity', 'address_street' , 'address_phone' ])) ;
                 
                 
             }
@@ -80,38 +87,44 @@ const validateName = (selector) => {
 
 
 
-            if(!stock_nxt.isEmpty()) {
-                
+            if(flag) {
 
-                const currentNxt = stock_nxt.pop() ;
-                const currentPass = stock_nxt.peak() ;
-    
-                console.log(currentNxt); 
-    
-                stock_bck.push(currentNxt) ;
-    
-                const trackerOn = document.querySelector(`.${currentNxt}`) ;
-                trackerOn.classList.add('on')
-
-                
-    
-                const containerPass = document.querySelector(`.${currentNxt}C`) ;
-                if(currentPass) {
-
-                    const containerNxt = document.querySelector(`.${currentPass}C`) ;
-        
-        
-                    containerNxt.classList.remove('off') ;
-                    containerNxt.classList.add('on') ;
+                if(!stock_nxt.isEmpty()) {
                     
-                    containerPass.classList.remove('on') ;
-                }
-                containerPass.classList.add('off') ;
     
-                // console.log(containerNxt) ;
-                // console.log(containerPass) ;
-            }
+                    const currentNxt = stock_nxt.pop() ;
+                    const currentPass = stock_nxt.peak() ;
+        
+                    console.log(currentNxt); 
+        
+                    stock_bck.push(currentNxt) ;
+        
+                    const trackerOn = document.querySelector(`.${currentNxt}`) ;
+                    trackerOn.classList.add('on')
+    
+                    
+        
+                    const containerPass = document.querySelector(`.${currentNxt}C`) ;
+                    if(currentPass) {
+    
+                        const containerNxt = document.querySelector(`.${currentPass}C`) ;
+            
+            
+                        containerNxt.classList.remove('off') ;
+                        containerNxt.classList.add('on') ;
+                        
+                        containerPass.classList.remove('on') ;
+                    }
+                    containerPass.classList.add('off') ;
+        
+                    // console.log(containerNxt) ;
+                    // console.log(containerPass) ;
+                }
 
+            }else {
+                console.log('adding error flag')
+                console.log(document.querySelector('.btn_nxt').classList.add('error')) ;
+            }
 
         }
 

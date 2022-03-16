@@ -1,8 +1,10 @@
 import {useState , useEffect} from 'react' ;
 import {bookNow} from '../../action/bookingAction'
 
+import { useAlert } from 'react-alert';
 import stock from '../../utils/stock';
 
+import { Form, Button } from 'semantic-ui-react';
 
 import './style.css' ;
 
@@ -10,11 +12,12 @@ import './script.js' ;
 
 import { useDispatch, useSelector  } from 'react-redux';
 
+import { useForm } from "react-hook-form" ;
 
 export default function () {
 
-    const stock_nxt = new stock() ;
-    const stock_bck = new stock() ;
+    // const stock_nxt = new stock() ;
+    // const stock_bck = new stock() ;
 
 
     const [data , setData] = useState({
@@ -29,20 +32,28 @@ export default function () {
     })
 
 
+
+    const onSubmit = (data) => {
+        console.log(data) ;
+    }
+
     const {firstName , lastName , gender , dateofBirth , city ,
                 subCity , street , phone} = data ;
 
     
-
-
-    console.log(stock_bck)
-
-    const dispatch = useDispatch() ;
-
-    useEffect(() => {
-
-
-    } ,[])
+                
+                
+                const alert = useAlert() ;
+                
+               const btn_nxt =  document.getElementsByClassName('btn_nxt') ;
+                
+                const dispatch = useDispatch() ;
+                
+                useEffect(() => {
+                    alert.error('BullShit!!!') ;
+                    console.log(errors) ;
+                    
+                } ,[errors])
 
 
     function onChange(e) {
@@ -53,7 +64,9 @@ export default function () {
         console.log(flag)
         if(flag[0] === 'btn') {
             if(flag[1] === 'btn_nxt') {
-                console.log(data) ;
+
+                
+                console.log(...data) ;
                 dispatch(bookNow(data)) ;
             }
             console.log('i am here') ;
@@ -84,21 +97,21 @@ export default function () {
                 <p>Choose your Care giver</p>
                 <div className="counter counter_2">
                     <span>2</span>
-                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="250" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="260" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#f1f7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"></polyline></svg>         
                 </div>
             </div>
             <div className="step three">
                 <p>Terms and Conditions</p>
                 <div className="counter counter_3">
                     <span>3</span>
-                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="250" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="260" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#f1f7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"></polyline></svg>         
                 </div>
             </div>
             <div className="step four">
                 <p>Conformation</p>
                 <div className="counter counter_4">
                     <span>4</span>
-                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <svg className="checked" xmlns="http://www.w3.org/2000/svg" width="192" height="250" fill="#ffff" viewBox="0 0 256 256"><rect width="256" height="260" fill="none"></rect><polyline points="216 72 104 184 48 128" fill="none" stroke="#f1f7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"></polyline></svg>         
                   </div>
             </div>
         </div>
@@ -117,10 +130,12 @@ export default function () {
                 <h4>Full Name</h4>
 
                 <div className="name_container">
-                    <input value={firstName} className="firstName" onChange={onChange} id="Name_f" type="text" placeholder="First Name" />
-                    <input value={lastName} className="lastName" onChange={onChange} id="Name_l" type="text" placeholder="Last Name" />
+                    <input 
+                     value={firstName} className="firstName"  onChange={onChange} id="Name_f" type="text" placeholder="First Name" />
+                     {errors.firstName && <p>Please check the first Name </p>}
+                    <input 
+                     value={lastName} className="lastName" onChange={onChange} id="Name_l" type="text" placeholder="Last Name" />
                 </div>
-                <small id="error_Name" className="error"></small>
                 <div className="gender_and_Dbirth">
                    
                 <div className="dropdown">
@@ -133,24 +148,26 @@ export default function () {
                 
                 <div className="dateofBirth">
                 <small>Date of Birth</small>
-                <input  className="birthDate" onChange={onChange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
+                <input 
+                 className="birthDate" onChange={onChange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
                 </div>
                 
             </div>
-            <small id="error_gb" className="error"></small>
                 
                 <div className="address">
                     <h4>Address</h4>
                     <div>
 
-                        <input value={city} className="city" onChange={onChange} id="address_city" type="text" placeholder="City" />
-                        <input value={subCity} className="subCity" onChange={onChange} id="address_subCity" type="text" placeholder="SubCity" />
-                        <input value={street} className="street" onChange={onChange} id="address_street" type="text" placeholder="Street Address" />
-                        <input value={phone} className="phone" onChange={onChange} id="address_phone" type="number" placeholder="Phone Number" /> 
+                        <input 
+                         value={city} className="city" onChange={onChange} id="address_city" type="text" placeholder="City" />
+                        <input 
+                         value={subCity} className="subCity" onChange={onChange} id="address_subCity" type="text" placeholder="SubCity" />
+                        <input 
+                         value={street} className="street" onChange={onChange} id="address_street" type="text" placeholder="Street Address" />
+                        <input 
+                        value={phone} className="phone" onChange={onChange} id="address_phone" type="number" placeholder="Phone Number" /> 
                     </div>
                 </div>
- 
-            <small id="error_address" className="error"></small>
 
                 
             </div>
@@ -350,8 +367,10 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
 
 
     <div className="action_set">
-        <button onClick={onChange} className="btn btn_back" id="bck">Back</button>
-        <button onClick={onChange} className="btn btn_nxt">Next</button>
+        <button type="submit" 
+        onSubmit={handleSubmit(onSubmit)} 
+        onClick={onChange} className="btn btn_back" id="bck">Back</button>
+        <button onClick={onChange} className="btn btn_nxt ">Next</button>
     </div>
 </body>
     )
