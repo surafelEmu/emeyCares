@@ -4,7 +4,6 @@ import {bookNow} from '../../action/bookingAction'
 import { useAlert } from 'react-alert';
 import stock from '../../utils/stock';
 
-import { Form, Button } from 'semantic-ui-react';
 
 import './style.css' ;
 
@@ -12,12 +11,11 @@ import './script.js' ;
 
 import { useDispatch, useSelector  } from 'react-redux';
 
-import { useForm } from "react-hook-form" ;
 
 export default function () {
 
-    // const stock_nxt = new stock() ;
-    // const stock_bck = new stock() ;
+    const stock_nxt = new stock() ;
+    const stock_bck = new stock() ;
 
 
     const [data , setData] = useState({
@@ -32,28 +30,24 @@ export default function () {
     })
 
 
-
-    const onSubmit = (data) => {
-        console.log(data) ;
-    }
-
     const {firstName , lastName , gender , dateofBirth , city ,
                 subCity , street , phone} = data ;
 
     
-                
-                
-                const alert = useAlert() ;
-                
-               const btn_nxt =  document.getElementsByClassName('btn_nxt') ;
-                
-                const dispatch = useDispatch() ;
-                
-                useEffect(() => {
-                    alert.error('BullShit!!!') ;
-                    console.log(errors) ;
-                    
-                } ,[errors])
+
+    const alert = useAlert() ;
+
+    console.log(stock_bck)
+
+    const dispatch = useDispatch() ;
+
+    const nxt_btn = document.getElementsByClassName('btn_nxt'); 
+    
+
+    useEffect(() => {
+        alert.error('BullShit!!!')
+        console.log(nxt_btn) ;
+    } ,[nxt_btn])
 
 
     function onChange(e) {
@@ -61,12 +55,15 @@ export default function () {
         let flag = '' ;
         flag = e.target.className.split(' ') ;
         console.log('.................Here i am....................')
-        console.log(flag)
+
+        console.log(flag[2])
+        if(flag[2] == 'err') {
+            alert.error('please fill the form') ;
+        }
         if(flag[0] === 'btn') {
             if(flag[1] === 'btn_nxt') {
-
                 
-                console.log(...data) ;
+                console.log(data) ;
                 dispatch(bookNow(data)) ;
             }
             console.log('i am here') ;
@@ -130,11 +127,8 @@ export default function () {
                 <h4>Full Name</h4>
 
                 <div className="name_container">
-                    <input 
-                     value={firstName} className="firstName"  onChange={onChange} id="Name_f" type="text" placeholder="First Name" />
-                     {errors.firstName && <p>Please check the first Name </p>}
-                    <input 
-                     value={lastName} className="lastName" onChange={onChange} id="Name_l" type="text" placeholder="Last Name" />
+                    <input value={firstName} className="firstName" onChange={onChange} id="Name_f" type="text" placeholder="First Name" />
+                    <input value={lastName} className="lastName" onChange={onChange} id="Name_l" type="text" placeholder="Last Name" />
                 </div>
                 <div className="gender_and_Dbirth">
                    
@@ -148,8 +142,7 @@ export default function () {
                 
                 <div className="dateofBirth">
                 <small>Date of Birth</small>
-                <input 
-                 className="birthDate" onChange={onChange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
+                <input  className="birthDate" onChange={onChange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
                 </div>
                 
             </div>
@@ -158,14 +151,10 @@ export default function () {
                     <h4>Address</h4>
                     <div>
 
-                        <input 
-                         value={city} className="city" onChange={onChange} id="address_city" type="text" placeholder="City" />
-                        <input 
-                         value={subCity} className="subCity" onChange={onChange} id="address_subCity" type="text" placeholder="SubCity" />
-                        <input 
-                         value={street} className="street" onChange={onChange} id="address_street" type="text" placeholder="Street Address" />
-                        <input 
-                        value={phone} className="phone" onChange={onChange} id="address_phone" type="number" placeholder="Phone Number" /> 
+                        <input value={city} className="city" onChange={onChange} id="address_city" type="text" placeholder="City" />
+                        <input value={subCity} className="subCity" onChange={onChange} id="address_subCity" type="text" placeholder="SubCity" />
+                        <input value={street} className="street" onChange={onChange} id="address_street" type="text" placeholder="Street Address" />
+                        <input value={phone} className="phone" onChange={onChange} id="address_phone" type="number" placeholder="Phone Number" /> 
                     </div>
                 </div>
 
@@ -367,9 +356,7 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
 
 
     <div className="action_set">
-        <button type="submit" 
-        onSubmit={handleSubmit(onSubmit)} 
-        onClick={onChange} className="btn btn_back" id="bck">Back</button>
+        <button onClick={onChange} className="btn btn_back" id="bck">Back</button>
         <button onClick={onChange} className="btn btn_nxt ">Next</button>
     </div>
 </body>

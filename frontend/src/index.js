@@ -12,7 +12,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import {store , persistor} from './store' ;
 
-import 'semantic-ui-css/semantic.min.css'
 
 const options = {
   timeout: 5000 ,

@@ -123,7 +123,7 @@ const validateName = (selector) => {
 
             }else {
                 console.log('adding error flag')
-                console.log(document.querySelector('.btn_nxt').classList.add('error')) ;
+                console.log(document.querySelector('.btn_nxt').classList.add('err')) ;
             }
 
         }

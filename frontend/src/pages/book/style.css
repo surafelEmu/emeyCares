@@ -14,17 +14,26 @@
         margin: 0 ;
         padding: 0 ;
         box-sizing: border-box;
-        color: #343a40;
+        color: white;
      
         font-family: 'Merriweather', serif;
+        }
+
+        .alert {
+            color: white
         }
 
         html {
             font-size: 62.5%;
             scroll-behavior: smooth;
         }
+
+        alert {
+            color: white; 
+        }
     
     body{
+        color: #343a40;
         background-color: #f1f7f7 ;
         font-size: 1rem;
     }.bag {
@@ -48,6 +57,7 @@
         }
 
         .header_bag h2 {
+            color: #343a40;
             font-size: 2.4rem;
         }
 
@@ -58,6 +68,8 @@
         }
 
         .step {
+            color: #343a40;
+
             font-size: 1.4rem;
             display: grid;
             grid-template-rows: 1fr 1fr;
@@ -65,10 +77,14 @@
 
 
         .checked {
+            color: #343a40;
+
             display: none;
         }
     
         .progress {
+            color: #343a40;
+
             margin-top: 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -77,6 +93,8 @@
         }
 
         .counter {
+            color: #343a40;
+
             margin-top: 1rem;
             position: relative;
             height: 4rem;
@@ -91,6 +109,8 @@
         /* .counter::before */
 
         .on .counter .checked {
+            color: #343a40;
+
             display: block;
             width: 4rem;
             height: 4rem;
