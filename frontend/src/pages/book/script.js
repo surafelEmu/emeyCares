@@ -55,7 +55,8 @@ const validateName = (selector) => {
     
 
     window.onclick = function(event) {
-
+        
+        const action = document.querySelector('.action_set') ;
 
 
 
@@ -87,7 +88,7 @@ const validateName = (selector) => {
 
 
 
-            if(flag) {
+            if(!flag) {
 
                 if(!stock_nxt.isEmpty()) {
                     
@@ -106,12 +107,27 @@ const validateName = (selector) => {
         
                     const containerPass = document.querySelector(`.${currentNxt}C`) ;
                     if(currentPass) {
-    
+                        
                         const containerNxt = document.querySelector(`.${currentPass}C`) ;
-            
+                        
+                        console.log('******************') ;
+                        console.log(currentPass) ;
             
                         containerNxt.classList.remove('off') ;
                         containerNxt.classList.add('on') ;
+
+
+                        const bag = document.querySelector('.bag') ;
+
+                        if(currentPass == 'three') {
+                            
+                            bag.classList.add('bag_scroll') ;
+                            document.getElementById('nxt').innerText = 'Agree and Book' ;
+                            // action.classList.add('off') ;
+
+                        }else {
+                            bag.classList.remove('bag_scroll') ;
+                        }
                         
                         containerPass.classList.remove('on') ;
                     }
@@ -142,6 +158,10 @@ const validateName = (selector) => {
                 const containerPass = document.querySelector(`.${pass}C`) ;
                 const containerNxt = document.querySelector(`.${nxt}C`) ;
     
+                if(nxt != 'three') {
+                    document.querySelector('.bag').classList.remove('bag_scroll') ;
+                    document.getElementById('nxt').innerText = 'Next' ;
+                }
     
     
                 containerNxt.classList.remove('off') ;
@@ -159,16 +179,22 @@ const validateName = (selector) => {
             }
 
 
-            const action = document.querySelector('.action_set') ;
 
             console.log(action) ;
             console.log('................')
-            console.log(stock_bck) ;
+            console.log(stock_bck.peak()) ;
     
-            if(!stock_bck.isEmpty()) {
+            if((!stock_bck.isEmpty())) {
                 action.classList.add('on') ;
             } else {
                 action.classList.remove('on') ;
             }
+
+            if((stock_bck.peak() == 'three' || stock_bck.peak() == 'four')) {
+                action.classList.add('off') ;
+
+            }
+
+            
         
     }

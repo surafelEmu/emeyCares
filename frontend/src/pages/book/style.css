@@ -56,6 +56,16 @@
             margin-top: 5%;
         }
 
+        h4 {
+            color: #343a40;
+        }
+
+        textarea {
+            color: #343a40;
+            padding-inline: 0.2rem;
+            padding-block: 0.1rem;
+        }
+
         .header_bag h2 {
             color: #343a40;
             font-size: 2.4rem;
@@ -253,6 +263,7 @@
         .container_left input {
             margin-bottom: 1rem;
             outline: none;
+            color: #343a40;
         }
 
         input {
@@ -292,7 +303,7 @@
             outline: none;
             border: none;
             border: 0.05rem solid rgb(197, 193, 193);
-
+            color: #343a40;
         }
         
         .gender_and_Dbirth input{
@@ -316,20 +327,15 @@
             
         }
 
-
         .container_right {
-                position: relative;
-                border-radius: 0%;
-                height: 140%;
-                width: 110%;
-                background-color: #abefe2;
-                margin-top: -2rem;
-                /* top: -50%;
-                left: -3%;
-                transform: translateX(0);
-                transition: transform 0.6s ease-in-out; */
-                /* padding-top: 3rem;
-                padding-bottom: 4rem; */
+            position: relative;
+            border-radius: 0%;
+            height: 105%;
+            width: 110%;
+            background-color: #abefe2;
+            margin-top: -2rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
         }
 
         .inner_container {
@@ -341,7 +347,22 @@
             margin-left: 2rem;
         }
 
- 
+        textarea.right {
+            height: 8.5rem;
+            width: 80%;
+            margin: none;
+            resize: none;
+            overflow-y: scroll;
+            margin-inline: 0.3rem;
+            padding-inline: 1rem;
+            padding-block: 1rem;
+            outline: none;
+            border: 0.05rem solid rgb(197, 193, 193);
+        }
+
+        .top {
+            margin-bottom: 1rem;
+        }
 
         
         .inner_container input {
@@ -529,11 +550,8 @@
         } */
 
 
-        .bag {
-            overflow-y: scroll;
-        }
-
-
+        
+        
         /********payment******/
 
         .final_instr {
@@ -555,17 +573,17 @@
             line-height: 1.6;
             color: #787d81;
         }
-
-
+        
+        
         /******Confirmation******/
-
+        
         /* .confirm {
             transform: translateX(0%);
             transition: all .5s ease-out;
         }
-
+        
         */
-       /* .confirm {
+        /* .confirm {
             transform: translateX(-100%);
         }  */
 
@@ -576,7 +594,7 @@
         .terms {
             display: none;
         } */
-
+        
         .message {
             font-size: 1.8rem;
             margin-inline: 8.1rem;
@@ -588,11 +606,11 @@
             height: 50.7%;
             margin-left: 34.8%;
         }
-
+        
         .btn_nxt {
             align-self: flex-end;
         }
-
+        
         .btn_back {
             opacity: 0;
             visibility: hidden;
@@ -600,9 +618,20 @@
             
         }
 
+            .bag_scroll {
+                overflow-y: scroll;
+            }
 
         .on .btn_back {
             opacity: 1;
             visibility: visible;
             pointer-events: auto ;
         }
+
+        .off .btn {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none ;
+        }
+
+       

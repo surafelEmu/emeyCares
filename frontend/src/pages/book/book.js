@@ -17,6 +17,8 @@ export default function () {
     const stock_nxt = new stock() ;
     const stock_bck = new stock() ;
 
+    let [medical , setMedical] = useState([1]) ;
+
 
     const [data , setData] = useState({
         firstName: '' ,
@@ -69,6 +71,15 @@ export default function () {
             console.log('i am here') ;
         }else {
             setData({...data , [e.target.className]: e.target.value})
+        }
+
+        if(e.target.className == 'btn_add') {
+            console.log('here.......') ;
+            let arr = medical ;
+            let arrC = medical[medical.length - 1] + 1;
+            arr.push(arrC) ;
+            setMedical(arr)  ;
+            console.log(medical)
         }
     }
 
@@ -165,54 +176,22 @@ export default function () {
     
             <div className="container_right">
                       
+                <div className="inner_container ">
+                    <h4 className="top">Past and present medical problems</h4>
+                    <textarea className="right medical" />
+
+                   
+                </div>
+
                 <div className="inner_container">
+                    <h4 className="top">How may We help</h4>
+                    <textarea className="right help"/>
 
-                    <div className="medical_container">
-                        <p>past medical problem</p>
-                        <div className="medical_problems">
-                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
-                            <div>
-                                <button>+</button>
-                                <button>x</button>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div className="medical_container">
-                        <p>Any kind of medicaions currently taking</p>
-                        <div className="medical_problems">
-                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
-                            <div>
-                                <button>+</button>
-                                <button>x</button>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div className="medical_container">
-                        <p>current medical problems</p>
-                        <div className="medical_problems ">
-                            <input onChange={onChange} type="text" placeholder="ex a hart surgery" />
-                            <div>
-                                <button>+</button>
-                                <button>x</button>
-                            </div>
-                           
+                   
+                </div>
 
-                        </div>
-                    </div>
-    
-                    <div className="medical_container">
-                        <p>How can we help?</p>
-                        <div className="medical_problems">
-                            <input onChange={onChange} type="text" placeholder="ex I need just a baby sitter" />
-                            <div>
-                                <button>+</button>
-                                <button>x</button>
-                            </div>
-                        </div>
-                    </div>
-        
+                <div className="fill">
+
                 </div>
             </div>
     
@@ -356,8 +335,8 @@ HTML CSS JS follows all legal requirements to protect your privacy. Our Privacy 
 
 
     <div className="action_set">
-        <button onClick={onChange} className="btn btn_back" id="bck">Back</button>
-        <button onClick={onChange} className="btn btn_nxt ">Next</button>
+        <button onClick={onChange} className="btn btn_back" >Back</button>
+        <button onClick={onChange} className="btn btn_nxt " id="nxt">Next</button>
     </div>
 </body>
     )
