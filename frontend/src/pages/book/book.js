@@ -81,6 +81,11 @@ export default function () {
             setMedical(arr)  ;
             console.log(medical)
         }
+
+        if(e.target.className == 'book') {
+            console.log('boookeeddddddddddddddddd')
+            document.querySelector('.personal_info').classList.add('on') ;
+        }
     }
 
 
@@ -208,7 +213,7 @@ export default function () {
                     
                     <p className="pay">120 birr/Hr</p>
 
-                    <button>Book Now</button>
+                    <button onClick={onChange} className="book" id="book1">Book Now</button>
                 </div>
 
                 <div className="professional_info"> 

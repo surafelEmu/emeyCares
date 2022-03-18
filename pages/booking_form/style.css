@@ -186,8 +186,8 @@
         
         .caregiver_detail,.terms,.final_instr,.confirm {
             position: absolute;
-            transform: translateX(120%);
             transition: all .5s ease-out;
+            transform: translateX(120%);
         }
 
 

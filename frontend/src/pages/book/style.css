@@ -56,9 +56,11 @@
             margin-top: 5%;
         }
 
-        h4 {
+       h3,p,small,h4,h5,span {
             color: #343a40;
         }
+
+        
 
         textarea {
             color: #343a40;
@@ -156,6 +158,10 @@
             width: 13rem;
             right: -9rem;
             /* transition: all 500ms ease-out; */
+        }
+
+        .on .book {
+            background-color: #00866d;
         }
 /* 
         .step:first-child .counter span {
@@ -467,6 +473,8 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 1rem;
             justify-items: center;
+            width: 100%;
+            margin-left: -2rem;
         }
 
         .caregiver_detail .caregiver img {
@@ -510,7 +518,7 @@
             font-size: 1rem;
             border: none;
             margin-top: 0.2rem;
-            background-color: #48aa98;
+            background-color: #6ccab9;
             color: white;
         }
         .professional_info {
