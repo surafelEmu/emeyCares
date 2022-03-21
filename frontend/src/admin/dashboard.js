@@ -34,95 +34,167 @@ const Dashboard = () => {
 
     return (
         <Fragment>
-            <div className="row">
-                <div className="col-12 col-md-2">
-                    <Sidebar />
+                <div class="bag" >
+        <div class="bag_left" >
+            <div class="left_content">
+                <ul>
+                    <a class="action_list">
+                        Caregivers
+                    </a>
+                    <a class="action_list">
+                        Users
+                    </a>
+                    <a class="action_list">
+                        Bookings
+                    </a>
+                    <a class="action_list">
+                        clients
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right">
+
+     
+            <div class="right_top">
+                <div class="right_top_content">
+                    <div class="content_left">
+                        <h2 class="amount">
+                            200
+                        </h2>
+                        <p class="content">
+                            Caregivers
+                        </p>
+                    </div>
+                    <div class="content_right">
+                        <img src="./assets/icons8-nurse-48.png" />
+                    </div>
                 </div>
 
-                <div className="col-12 col-md-10">
-                    <h1 className="my-4">Dashboard</h1>
+                <div class="right_top_content">
+                    <div class="content_left">
+                        <h2 class="amount">
+                            200
+                        </h2>
+                        <p class="content">
+                            Users
+                        </p>
+                    </div>
+                    <div class="content_right">
+                        <img src="./assets/icons8-users-48.png" />
+                    </div>
+                </div>
 
-                    {loading ? <Loader /> : (
-                        <Fragment>
-                            <MetaData title={'Admin Dashboard'} />
+                
+                <div class="right_top_content">
+                    <div class="content_left">
+                        <h2 class="amount">
+                            200
+                        </h2>
+                        <p class="content">
+                            Bookings
+                        </p>
+                    </div>
+                    <div class="content_right">
+                        <img src="./assets/icons8-planner-48.png" />
+                    </div>
+                </div>
 
-                            <div className="row pr-4">
-                                <div className="col-xl-12 col-sm-12 mb-3">
-                                    <div className="card text-white bg-primary o-hidden h-100">
-                                        <div className="card-body">
-                                            <div className="text-center card-font-size">Total Amount<br /> 
-                                            {/* <b>${totalAmount && totalAmount.toFixed(2)}</b> */}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="right_top_content">
+                    <div class="content_left">
+                        <h2 class="amount">
+                            200
+                        </h2>
+                        <p class="content">
+                            WaitList
+                        </p>
+                    </div>
+                    <div class="content_right">
+                        <img src="./assets/icons8-planner-48.png" />
+                    </div>
+                </div>
 
-                            <div className="row pr-4">
-                                <div className="col-xl-3 col-sm-6 mb-3">
-                                    <div className="card text-white bg-success o-hidden h-100">
-                                        <div className="card-body">
-                                            <div className="text-center card-font-size">Products<br />
-                                             {/* <b>{products && products.length}</b> */}
-                                             </div>
-                                        </div>
-                                        <Link className="card-footer text-white clearfix small z-1" to="/admin/products">
-                                            <span className="float-left">View Details</span>
-                                            <span className="float-right">
-                                                <i className="fa fa-angle-right"></i>
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
-
-
-                                <div className="col-xl-3 col-sm-6 mb-3">
-                                    <div className="card text-white bg-danger o-hidden h-100">
-                                        <div className="card-body">
-                                            <div className="text-center card-font-size">Orders<br /> <b>{orders && orders.length}</b></div>
-                                        </div>
-                                        <Link className="card-footer text-white clearfix small z-1" to="/admin/orders">
-                                            <span className="float-left">View Details</span>
-                                            <span className="float-right">
-                                                <i className="fa fa-angle-right"></i>
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
+            </div> 
 
 
-                                <div className="col-xl-3 col-sm-6 mb-3">
-                                    <div className="card text-white bg-info o-hidden h-100">
-                                        <div className="card-body">
-                                            <div className="text-center card-font-size">Users<br /> 
-                                            {/* <b>{users && users.length}</b> */}
-                                            </div>
-                                        </div>
-                                        <Link className="card-footer text-white clearfix small z-1" to="/admin/users">
-                                            <span className="float-left">View Details</span>
-                                            <span className="float-right">
-                                                <i className="fa fa-angle-right"></i>
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
 
+            
+            <div class="right_bottom" >
+                <div class="bottom_content">
+                    <div class="bottom_content_top">
+                        <h4>Recent Payment</h4>
+                        <a href="">View All</a>
+                    </div>
 
-                                <div className="col-xl-3 col-sm-6 mb-3">
-                                    <div className="card text-white bg-warning o-hidden h-100">
-                                        <div className="card-body">
-                                            <div className="text-center card-font-size">Out of Stock<br /> <b>{outOfStock}</b></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Fragment>
-                    )}
-
+                    <div class="bottom_content_bottom">
+                        <table>
+                            <tr>
+                                <th>Company</th>
+                                <th>Contact</th>
+                                <th>Country</th>
+                              </tr>
+                              <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                              </tr>
+                              <tr>
+                                <td>Berglunds snabbköp</td>
+                                <td>Christina Berglund</td>
+                                <td>Sweden</td>
+                              </tr>
+                              <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr>
+                              <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr> <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                              </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-        </Fragment >
+        </div>
+    
+    </div>
+ </Fragment >
     )
 }
 
