@@ -1,12 +1,27 @@
 import {useState , useEffect} from 'react' ;
 
+import './style.css'
 
 export default function () {
     return (
-        <div class="bag">
+        <div class="container">
         <div class="top">
             <div class="top_right">
                 <img src="../../assets/icons/care-givers/caregiver-01.jpg" alt="" srcset="" />
+
+                <div className="caregiver_desc">
+                    <div className="ratings">4 Stars</div>
+                <div className="schedules">
+                    <div className="schedule">
+                        WeekDays (7am to 8pm)
+                    </div>
+                    <div className="schedule">
+                        WeekDays (7am to 8pm)
+                    </div> <div className="schedule">
+                        WeekDays (7am to 8pm)
+                    </div>
+                </div>
+                </div>
             </div>
             <div class="top_left">
                 <div class="content">
@@ -25,7 +40,7 @@ export default function () {
                         33
                     </p>
                 </div>
-                <div class="content">
+                <div class="content_list">
                     <h4 class="title">
                         Professions :
                     </h4>
@@ -46,7 +61,7 @@ export default function () {
 
                     </div>
                 </div>
-                <div class="content">
+                <div class="content_list">
                     <h4 class="title">
                         Languages :
                     </h4>
@@ -73,12 +88,32 @@ export default function () {
         </div>
 
 
-        <div className="comments">
+        <div class="comments">
+                <h2>Comments</h2>
+                <div class="comment">
+                    <div class="top">
+                        <div class="person">
+                            <img src="../../assets/icons/care-givers/caregiver-03.png" alt="" />
+                            <small>Samira Jemal</small>
+                            <p>
+                                Jovember 22 2022 at 6:00 am
+                            </p>
+                        </div>
+                        <a href="#">Reply</a>
+                    </div>
+                    
+                    <p class="comm">When a cat is frightened, its pupils grow bigger. This is to allow the cat to absorb as much information as possible. When the cat is angry or aroused, its pupils narrow in order to enable it to zoom in on tiny details. Do note, however, that since cats? pupils also change size according to the light, you should pay attention to its body language when trying to figure out how it is feeling.</p>
+                </div>
+            </div>
+
+
+        {/* <div className="comments">
             {[1,3,4].map(com => (
 
             <div key={com} className="comment">
                 <div className="top">
-                    <img src="./assets/icons/caregivers/caregiver-01.jpg" />
+                    <img src="../../assets/icons/care-givers/caregiver-01.jpg" />
+
                     <div className="rating">
                         3 stars
                     </div>
@@ -88,7 +123,7 @@ export default function () {
                 </div>
             </div>
             ))}
-        </div>
+        </div> */}
 
     </div>
     )

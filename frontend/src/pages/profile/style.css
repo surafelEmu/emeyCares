@@ -1,0 +1,223 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /* 
+      MAIN COLOR: #f1f7f7
+      SECOUNDARY COLOR: #00866d
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0 ;
+        padding: 0 ;
+        box-sizing: border-box;
+        color: #343a40;
+     
+        font-family: 'Merriweather', serif;
+        }
+
+        .alert {
+            color: white
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* grid-template-rows: 1fr 1fr; */
+        }
+
+        .top {
+            margin-bottom: 1rem;
+            display: grid;
+            margin-top: 5rem;
+            grid-template-columns: 1fr 1fr;
+            margin-left: 11rem;
+        }
+
+        .top_right img {
+            width: 40rem;
+            height: 40rem;
+            object-fit: cover;
+            margin-top: 1rem;
+        }
+
+        .top_left .content {
+            display: flex;
+        }
+
+
+        
+        .content h4.title {
+            font-size: 2.4rem;
+            margin-right: 2rem;
+            margin-block: auto;
+        }
+
+        .content_list {
+            display: flex;
+            margin-block: 3rem;
+        }
+
+
+        .content_list .title {
+            font-size: 2.4rem;
+        }
+
+        .detail_list .des {
+            display: flex;
+            text-align: center;
+            margin-top: 2rem;
+            justify-content: space-around;
+        }
+
+        p.desc {
+            font-size: 2rem;
+            font-weight: 600;
+            color: grey;
+            text-align: center;
+            margin-block: auto;
+        }
+
+        p.yrOfExp {
+            font-size: 2rem;
+            margin-left: 2rem;
+        }
+        .caregiver_desc .ratings {
+            margin-top: 1rem;
+            font-size: 1.7rem;
+        }
+
+        .caregiver_desc .schedules {
+            display: flex;
+            gap: 2rem;
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+
+        .schedules .schedule {
+            padding-inlnie: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: yellow;
+            padding-block: 0.5rem;
+            border-radius: 2rem;
+        }
+
+        /* .comment {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment .top img {
+            width: 6rem;
+            border-radius: 50%;
+        } */
+
+
+        .comments {
+            margin-top: 5rem;
+            margin-left: 7rem;
+            width: 65%;
+        }
+        .comments h2{
+            font-size: 3rem;
+            margin-bottom: 2rem;
+
+
+        }
+
+        .comment .person img{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 10%;
+            margin-right: 4rem;
+
+        }.comments {
+            margin-top: 5rem;
+            margin-left: 7rem;
+            width: 65%;
+        }
+
+        .comment .person {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment .top {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 2rem;
+            margin-block: 2rem;
+        }
+
+        .comment .top .person small {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .comment .top .person p {
+            font-size: 1.6rem;
+            margin-left: 2rem;
+            color: #218682;
+        }
+
+        .comment .top a {
+            font-size: 1.4rem;
+            padding-inline: 1rem;
+            padding-block: 1rem;
+            background-color: #218682;
+            height: fit-content;
+            text-decoration: none;
+            font-weight: 600;
+            color: whitesmoke;
+        }
+
+        .comment {
+            padding-block: 2rem;
+            margin-block-end: 2rem;
+            margin-inline: 2rem;
+            border-block: 1px solid #c3c5c7;
+        }
+        .comment .comm {
+            font-size: 1.8rem;
+        }
+
+        .leave_comment {
+            width: 90%;
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .leave_comment h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .leave_comment textarea {
+            width: 100%;
+            background-color: #f0f1f1;
+            border: none;
+            margin-bottom: 2rem;
+        }
+
+        .leave_comment  a {
+            font-size: 2.2rem;
+            text-decoration: none;
+            align-self: flex-end;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            background-color: #218682;
+            color: whitesmoke;
+        }
