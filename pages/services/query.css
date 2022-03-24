@@ -1,0 +1,287 @@
+
+
+@media(max-width: 76em) {
+    html{
+
+        font-size: 60%;
+    }
+
+
+}
+
+@media(max-width: 68em) {
+    html {
+       
+    }
+
+    .hero_section img {
+    width: 98.9%;
+    
+}
+
+
+
+    .hero_section .hero_message {
+    margin-inline-start: 7.2rem;
+    }
+
+    .therapy img {
+    width: 75%;
+   
+}
+}
+
+@media(max-width: 59em) {
+    .hero_section img {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+   .therapy img {
+    grid-row-start: 2;
+    width: 75%;
+    }
+
+.outcomes img {
+    width: 80%;
+}
+
+.hero_section .hero_message p {
+   
+    margin-bottom: 5rem;
+
+}
+
+.hero_section .hero_message {
+    margin-block: 13%;
+   
+}
+
+
+.therapy .therapy-message {
+    
+    margin-inline-end: 5rem;
+}
+
+
+
+}
+
+
+@media(max-width: 50em) {
+    html {
+        font-size: 53%
+    }
+
+    .cares .cares_list {
+    gap: 4rem;
+    margin-block: 4rem;
+    margin-inline: 5rem;
+}
+
+.outcome-message {
+    margin-left: 0rem;
+    margin-block: 7.3rem;
+}
+
+.testimonial_section h2 {
+    margin-bottom: 4rem;
+}
+
+.testimonials {
+    
+    gap: 4.2rem;
+    margin-inline: 4.5rem;
+   
+}
+
+.getting_started h2 {
+    
+    margin-bottom: 5rem;
+}
+
+.getting_started .steps {
+    
+    margin-inline: 6rem;
+    gap: 6rem;
+    margin-bottom: 4rem;
+}
+
+
+}
+
+@media (max-width: 43em) {
+    nav.navs {
+    display: none;
+}
+
+
+.hero_section {
+    display: grid;
+    grid-template-columns: none;
+}
+
+.hero_section .hero_message h2 {
+    font-size: 8.2rem;
+    text-align: center ;
+}
+
+.hero_section .hero_message {
+    margin-inline: 3.2rem;
+
+}
+
+.hero_section .hero_message p {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.hero_section .hero_message a {
+    font-size: 2.6rem;
+    padding-inline: 3.9rem;
+    padding-block: 1.3rem;
+    border-radius: 3rem;
+    margin-inline: auto;
+    /* justify-self: center; */
+    /* align-self: center; */
+    margin-left: 30%;
+}
+
+.hero_section img {
+    margin-inline: auto;
+}
+
+
+.therapy img {
+    grid-row-start: 2;
+}
+
+
+.therapy-message {
+    margin-inline: 5rem;
+    text-align: center;
+}
+
+.therapy-message h2 {
+    font-size: 3.8rem;
+}
+
+.therapy-message p {
+    font-size: 2.2rem;
+    margin-bottom: 3.6rem;
+}
+
+.therapy-message a {
+    padding-inline: 4rem;
+    font-size: 2.2rem;
+}
+
+.cares .cares_list {
+   
+    grid-template-columns: none;
+    text-align: center;
+    gap: 6rem;
+
+}
+
+.care  h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.care p {
+    font-size: 2.2rem;
+
+}
+
+.outcomes {
+    
+    grid-template-columns: none;
+    gap: 1rem;
+    text-align: center ;
+    }
+
+ .outcomes .outcome-message h2 {
+    font-size: 4.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.outcome-message p {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.outcome-message a {
+    font-size: 2.8rem;
+   
+}
+
+.outcomes img {
+    width: 80%;
+}
+
+.testimonials {
+   
+    grid-template-columns: none;
+   
+}
+
+.getting_started .steps {
+   
+    grid-template-columns: none;
+    text-align: center;
+   
+}
+
+.getting_started .steps .step .step-heading {
+  
+    justify-content: center;
+}
+
+.getting_started .steps .step .step-heading h3 {
+    font-size: 2.2rem;
+}
+
+.getting_started .steps .step p {
+    font-size: 2rem;
+}
+
+.getting_started a {
+
+    margin-left: 39%;
+    font-size: 2.4rem;
+    
+}
+
+.blogs {
+   grid-template-columns: none;
+   gap: 10rem;
+   margin-inline: 8.2rem;
+}
+
+h2.blog-heading {
+    font-size: 2.4rem;
+
+}
+
+.blog-message p {
+    font-size: 1.8rem;
+    
+}
+
+.blog-message small {
+    font-size: 1.8rem;
+}
+
+.blog-message a {
+    font-size: 2.2rem;
+   
+}
+.therapy {
+   
+    grid-template-columns: none;
+   
+}
+}
