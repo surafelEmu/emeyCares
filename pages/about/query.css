@@ -28,6 +28,77 @@
     nav.navs {
         display: none;
     }
+
+
+    button.mobile-nav {
+        display: flex;
+        height: 3rem;
+        width: 3.5rem;
+        outline: none;
+        border: none;
+        /* align-self: center; */
+    }
+
+    nav.navs {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
+        opacity: 0 ;
+        pointer-events: none;
+        visibility: hidden;
+        text-align: center;
+        height: 0rem;
+        margin: 0rem;
+        transition: all 0.5s;
+    }
+
+    .open .nav-open {
+        display: none;
+    }
+
+    .open .nav-close {
+        display: block  ;
+    }
+
+    .open .navs {
+        margin-top: 2rem;
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        margin-bottom: 2rem;
+    }
+
+    .nav-open {
+        display: block;
+    }
+
+    .nav-close {
+        display: none;
+    }
+
+
+  
+    .nav-bar {
+        padding-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .navs a {
+        margin-left: 0rem;
+        font-size: 2.4rem;
+    }
+
+
+
+    .open .navs {
+        margin-top: 6.4rem;
+        margin-bottom: 25.6rem;
+        opacity: 1 ;
+        pointer-events: auto ;
+        visibility: visible;
+        text-align: center;
+    }
     
     .team .team_list {
        grid-template-columns: none ;
