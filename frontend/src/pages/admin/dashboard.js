@@ -17,9 +17,29 @@ const Dashboard = () => {
     const dispatch = useDispatch();
     const pointer = useState(1) ;
 
-    const { data } = useSelector(state => state.employeeList)
+    // const { data } = useSelector(state => state.employeeList)
     const { Userdata } = useSelector(state => state.users)
     const { orders, totalAmount, loading } = useSelector(state => state.booking)
+
+
+
+
+    const [data , setData] = useState({
+        firstName: '' ,
+        lastName: '' ,
+        gender: '' ,
+        dateofBirth: '' ,
+        city: '' ,
+        subCity: '' ,
+        street: '' ,
+        phone: ''
+    })
+
+
+    const {firstName , lastName , gender , dateofBirth , city ,
+                subCity , street , phone} = data ;
+
+
 
     let outOfStock = 0;
     // products.forEach(product => {
@@ -37,26 +57,33 @@ const Dashboard = () => {
 
     onchange = (e) =>  {
         if(e.target.className == 'action_list') {
+            console.log(e.target.innerHTML)
+            if(e.target.innerHTML == 'Add Caregivers') {
+                console.log('adding caregivers')
+            }
             console.log('clicked') ;
         }
     }
 
     return (
         <Fragment>
-                <div className="bag" >
+    <div className="bag" >
         <div className="bag_left" >
             <div className="left_content">
                 <ul>
                     <a onClick={onchange} className="action_list">
                         Caregivers
                     </a>
-                    <a className="action_list">
+                    <a onClick={onchange} className="action_list">
+                        Add Caregivers
+                    </a>
+                    <a onClick={onchange} className="action_list">
                         Users
                     </a>
-                    <a className="action_list">
+                    <a onClick={onchange} className="action_list">
                         Bookings
                     </a>
-                    <a className="action_list">
+                    <a onClick={onchange} className="action_list">
                         clients
                     </a>
                 </ul>
@@ -208,6 +235,77 @@ const Dashboard = () => {
                               </tr>
                         </table>
                     </div>
+
+
+                    <div className="container personal_Info oneC on" id="oneC">
+                <div className="container_left">
+                
+                <h4>Full Name</h4>
+
+                <div className="name_container">
+                    <input value={firstName} className="firstName" onChange={onchange} id="Name_f" type="text" placeholder="First Name" />
+                    <input value={lastName} className="lastName" onChange={onchange} id="Name_l" type="text" placeholder="Last Name" />
+                </div>
+                 <div className="gender_and_Dbirth">
+                {/*   
+                <div className="dropdown">
+                    <button onClick="myFunction()" className="dropbtn">Gender</button>
+                    <div id="myDropdown" className="dropdown-content">
+                    <a href="#home">Male</a>
+                    <a href="#about">Female</a>
+                    </div>
+                </div> */}
+                
+                <div className="dateofBirth">
+                <small>Date of Birth</small>
+                <input  className="birthDate" onChange={onchange} id="gb_birth"  placeholder="Date of Birth" type="date" onfocus="{this.type='date'}" />
+                </div>
+                
+            </div>
+                
+                <div className="address">
+                    <h4>Address</h4>
+                    <div>
+
+                        <input value={city} className="city" onChange={onchange} id="address_city" type="text" placeholder="City" />
+                        <input value={subCity} className="subCity" onChange={onchange} id="address_subCity" type="text" placeholder="SubCity" />
+                        <input value={street} className="street" onChange={onchange} id="address_street" type="text" placeholder="Street Address" />
+                        <input value={phone} className="phone" onChange={onchange} id="address_phone" type="number" placeholder="Phone Number" /> 
+                    </div>
+                </div>
+
+                
+            </div>
+
+      
+    
+            <div className="container_right">
+                      
+                <div className="inner_container ">
+                    <h4 className="top">Past and present medical problems</h4>
+                    <textarea className="right medical" />
+
+                   
+                </div>
+
+                <div className="inner_container">
+                    <h4 className="top">How may We help</h4>
+                    <textarea className="right help"/>
+
+                   
+                </div>
+
+                <div className="fill">
+
+                </div>
+            </div>
+    
+        </div>
+
+
+
+
+
                 </div>
             </div>
 

@@ -17,7 +17,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers ({
     services: serviceReducer ,
-    signup: signupReducer ,
+    users: signupReducer ,
     employeeList: listEmployeesReducer ,
     addEmployee: addEmployeeReducer ,
     empDetail: employeeDetailReducer ,

@@ -5,7 +5,7 @@ import { useAlert } from 'react-alert';
 import stock from '../../utils/stock';
 
 
-import './style.css' ;
+import './book.css' ;
 
 import './script.js' ;
 

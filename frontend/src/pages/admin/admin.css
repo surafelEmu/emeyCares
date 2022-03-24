@@ -77,13 +77,24 @@
             padding-inline: 7.7rem;
             padding-block-end: 3rem;
             overflow: scroll;
-            height: 37%;
+            height: 67%;
             display: flex;
             flex-direction: column;
             margin-block: 1.3rem;
             margin-inline: 3rem;
         }
     
+        
+
+        .container_left input {
+            padding-block: 0.5rem;
+            outline: none;
+            border: none;
+            background: #f1f7f7;
+            margin-inline: 1rem;
+            margin-block: 1rem;
+        }
+
         .right_bottom {
            
         }
@@ -195,3 +206,41 @@
         tbody {
             overflow: scroll;
         }
+
+
+        .bottom_content_bottom {
+            display: none;
+        }
+
+
+        div#oneC {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-block: 3rem;
+            width: 75%;
+            
+                width: 70%;
+                margin-left: -3rem;
+        
+        }
+
+        textarea.right {
+            border: none;
+            background-color: #f1f7f7;
+        }
+
+        /*** ADding new caregiver ***/
+        
+        
+        .personal_Info {
+            position: absolute;
+            /* transform: translateX(0%) ; */
+            transition: all .5s ease-out;
+
+            
+        }
+        
+
+
+        /* Transition to adding new caregivers */
