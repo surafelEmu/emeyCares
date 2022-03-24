@@ -37,10 +37,7 @@
         margin-inline: auto;
     }
 
-   .therapy img {
-    grid-row-start: 2;
-    width: 75%;
-    }
+   
 
 .outcomes img {
     width: 80%;
@@ -284,4 +281,8 @@ h2.blog-heading {
     grid-template-columns: none;
    
 }
+.therapy img {
+    grid-row-start: 2;
+    width: 75%;
+    }
 }

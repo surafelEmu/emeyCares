@@ -1,0 +1,42 @@
+
+@media(max-width: 62em) {
+    .hero .message-hero {
+       
+        padding-inline: 20rem;
+    }    
+    
+    html {
+        font-size: 58%
+    }
+    
+    .mession_section {
+       grid-template-columns: none ;
+    }
+    
+    .mession_section img {
+        display: none
+    }
+    }
+    
+    
+    @media(max-width: 45em) {
+        .hero .message-hero {
+       
+        padding-inline: 10rem;
+    }  
+    
+    nav.navs {
+        display: none;
+    }
+    
+    .team .team_list {
+       grid-template-columns: none ;
+    
+    }  
+    
+    .team .team_list .member {
+        margin-bottom: 5rem
+    }
+    }
+    
+    

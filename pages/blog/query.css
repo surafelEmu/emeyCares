@@ -1,0 +1,50 @@
+
+
+@media(max-width: 62.5em) {
+    html {
+        font-size: 56%;
+    }
+}
+
+@media(max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+@media(max-width: 50em) {
+    html {
+        font-size: 44%;
+    }
+
+
+}
+
+@media(max-width: 43em) {
+    html {
+        font-size: 38%
+    }
+nav.navs {
+    display: none;
+}
+    
+}
+
+@media(max-width: 40em) {
+    html {
+        font-size: 32% ;
+    }
+}
+
+@media(max-width: 33em) {
+    html {
+        font-size: 28% ;
+    }
+}
+
+@media(max-width: 26em) {
+    html {
+        font-size: 24% ;
+    }
+}
